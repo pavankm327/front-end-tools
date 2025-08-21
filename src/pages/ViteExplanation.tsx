@@ -14,7 +14,7 @@ const ViteExplanation = () => {
 
           <section>
             <h2 className="text-2xl font-bold mb-4 text-primary dark:text-primary-foreground">Explain Vite in Simple English</h2>
-            <p className="mb-2">let’s keep it very simple.</p>
+            <p className="mb-2">Let’s keep it very simple.</p>
             <p className="mb-4">Vite (pronounced like “veet”) is a tool that helps developers build modern web apps faster.</p>
             <h3 className="text-xl font-semibold mb-2">Here’s why it’s useful:</h3>
             <ul className="list-disc list-inside space-y-2 ml-4">
