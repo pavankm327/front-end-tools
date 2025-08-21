@@ -14,6 +14,9 @@ const Index = () => {
           <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
             Learn About Vite
           </Button>
+          <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+            Learn About Vite
+          </Button>
         </Link>
       </div>
     </div>
