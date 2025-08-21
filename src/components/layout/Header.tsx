@@ -39,6 +39,12 @@ const Header = () => {
               Web Services
             </Link>
             <Link
+              to="/webhook"
+              className="text-gray-700 dark:text-gray-200 hover:text-blue-600"
+            >
+              Webhook
+            </Link>
+            <Link
               to="/about"
               className="text-gray-700 dark:text-gray-200 hover:text-blue-600"
             >
@@ -85,6 +91,13 @@ const Header = () => {
             onClick={() => setIsOpen(false)}
           >
             Web Services
+          </Link>
+          <Link
+            to="/webhook"
+            className="block text-gray-700 dark:text-gray-200 hover:text-blue-600"
+            onClick={() => setIsOpen(false)}
+          >
+            Webhook
           </Link>
           <Link
             to="/about"

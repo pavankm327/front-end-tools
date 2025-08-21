@@ -6,7 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ViteExplanation from "./pages/ViteExplanation";
-import WebServicesExplanation from "./pages/WebServicesExplanation"; // Updated import path
+import WebServicesExplanation from "./pages/WebServicesExplanation";
+import WebhookExplained from "./pages/WebhookExplained";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/vite-explanation" element={<ViteExplanation />} />
           <Route path="/web-services-explanation" element={<WebServicesExplanation />} />
+          <Route path="/webhook" element={<WebhookExplained />} />
+          {/* Add more routes as needed */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
