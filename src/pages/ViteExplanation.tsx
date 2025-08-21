@@ -312,7 +312,7 @@ Browser → directly requests Header.js from Vite server`}
 
           <section>
             <h2 className="text-2xl font-bold mb-4 text-primary dark:text-primary-foreground">esbuild in Dev, Rollup in Prod</h2>
-            <p className="mb-2">Perfect 👍 this is the heart of Vite’s workflow — let’s break it down step by step.</p>
+            <p className="mb-2">This is the heart of Vite’s workflow — let’s break it down step by step.</p>
 
             <h3 className="text-xl font-semibold mb-2">🔹 Part 1: How esbuild works in Development</h3>
             <p className="mb-2">esbuild is like Vite’s turbo engine during dev mode.</p>
