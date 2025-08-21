@@ -5,7 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import ViteExplanation from "./pages/ViteExplanation"; // Import the new page
+import ViteExplanation from "./pages/ViteExplanation";
+import WebServicesExplanation from "./pages/WebServicesExplanation"; // Import the new page
 
 const queryClient = new QueryClient();
 
@@ -17,7 +18,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/vite-explanation" element={<ViteExplanation />} /> {/* New route */}
+          <Route path="/vite-explanation" element={<ViteExplanation />} />
+          <Route path="/web-services-explanation" element={<WebServicesExplanation />} /> {/* New route */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
