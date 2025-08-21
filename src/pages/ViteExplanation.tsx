@@ -496,7 +496,7 @@ Your Code (TS / JSX / Vue / Modern JS)
           </section>
         </CardContent>
       </Card>
-      <MadeWithDyad />
+      // <MadeWithDyad />
     </div>
   );
 };
