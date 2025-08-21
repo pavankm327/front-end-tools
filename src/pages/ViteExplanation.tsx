@@ -451,7 +451,7 @@ Your Code (TS / JSX / Vue / Modern JS)
 
           <section>
             <h2 className="text-2xl font-bold mb-4 text-primary dark:text-primary-foreground">Why Not esbuild for Production Too?</h2>
-            <p className="mb-2">Great question 🔥 — if esbuild is so fast, why doesn’t Vite just use it for production too? Let’s unpack it.</p>
+            <p className="mb-2">If esbuild is so fast, why doesn’t Vite just use it for production too? Let’s unpack it.</p>
 
             <h3 className="text-xl font-semibold mb-2">🔹 Why Vite doesn’t use esbuild for Production Bundling</h3>
             <p className="mb-2">Vite uses esbuild in development (for speed), but switches to Rollup in production (for flexibility and optimization).</p>
