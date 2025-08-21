@@ -28,7 +28,7 @@ const WebServicesExplanation = () => {
     <div className="min-h-screen flex flex-col items-center bg-gradient-to-br from-indigo-500 to-purple-600 p-4 sm:p-8">
       <Card className="w-full max-w-6xl shadow-2xl rounded-xl overflow-hidden my-8">
         <CardHeader className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="white" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="white" opacity="0.1"/><circle cx="90" cy="90" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>')] opacity-30"></div>
+          {/* Removed complex SVG background to fix parsing errors */}
           <CardTitle className="text-5xl font-extrabold mb-4 relative z-10">🌐 Understanding Web Services</CardTitle>
           <p className="text-xl opacity-90 font-light relative z-10">A Comprehensive Guide to Modern Service Architecture</p>
         </CardHeader>
@@ -135,14 +135,13 @@ const WebServicesExplanation = () => {
                   <div className="text-xl font-bold mb-2 text-gray-900">XML Format</div>
                   <pre className="bg-gray-900 text-white p-3 rounded-md text-sm overflow-x-auto relative" data-lang="XML">
                     <span className="absolute top-0 right-0 bg-indigo-500 text-white px-2 py-1 text-xs font-semibold rounded-bl-lg">XML</span>
-                    <code>
-&lt;weather&gt;
-  &lt;city&gt;London&lt;/city&gt;
-  &lt;temperature unit="celsius"&gt;22&lt;/temperature&gt;
-  &lt;condition&gt;Sunny&lt;/condition&gt;
-  &lt;humidity&gt;65%&lt;/humidity&gt;
-&lt;/weather&gt;
-                    </code>
+                    <code>{`<?xml version="1.0" encoding="UTF-8"?>
+<weather>
+  <city>London</city>
+  <temperature unit="celsius">22</temperature>
+  <condition>Sunny</condition>
+  <humidity>65%</humidity>
+</weather>`}</code>
                   </pre>
                 </div>
 
@@ -152,8 +151,7 @@ const WebServicesExplanation = () => {
                   <div className="text-xl font-bold mb-2 text-gray-900">JSON Format</div>
                   <pre className="bg-gray-900 text-white p-3 rounded-md text-sm overflow-x-auto relative" data-lang="JSON">
                     <span className="absolute top-0 right-0 bg-indigo-500 text-white px-2 py-1 text-xs font-semibold rounded-bl-lg">JSON</span>
-                    <code>
-{
+                    <code>{`{
   "city": "London",
   "temperature": {
     "value": 22,
@@ -161,8 +159,7 @@ const WebServicesExplanation = () => {
   },
   "condition": "Sunny",
   "humidity": "65%"
-}
-                    </code>
+}`}</code>
                   </pre>
                 </div>
               </div>
@@ -188,21 +185,19 @@ const WebServicesExplanation = () => {
                   <h4 className="text-xl font-bold mb-2 text-red-700">SOAP Services - WSDL</h4>
                   <pre className="bg-gray-900 text-white p-3 rounded-md text-sm overflow-x-auto relative" data-lang="WSDL">
                     <span className="absolute top-0 right-0 bg-indigo-500 text-white px-2 py-1 text-xs font-semibold rounded-bl-lg">WSDL</span>
-                    <code>
-&lt;definitions name="WeatherService"&gt;
-  &lt;types&gt;
-    &lt;schema&gt;
-      &lt;element name="GetWeatherRequest"&gt;
-        &lt;complexType&gt;
-          &lt;sequence&gt;
-            &lt;element name="city" type="string"/&gt;
-          &lt;/sequence&gt;
-        &lt;/complexType&gt;
-      &lt;/element&gt;
-    &lt;/schema&gt;
-  &lt;/types&gt;
-&lt;/definitions&gt;
-                    </code>
+                    <code>{`<definitions name="WeatherService">
+  <types>
+    <schema>
+      <element name="GetWeatherRequest">
+        <complexType>
+          <sequence>
+            <element name="city" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+</definitions>`}</code>
                   </pre>
                 </div>
 
@@ -210,15 +205,14 @@ const WebServicesExplanation = () => {
                   <h4 className="text-xl font-bold mb-2 text-green-700">REST Services - OpenAPI/Swagger</h4>
                   <pre className="bg-gray-900 text-white p-3 rounded-md text-sm overflow-x-auto relative" data-lang="YAML">
                     <span className="absolute top-0 right-0 bg-indigo-500 text-white px-2 py-1 text-xs font-semibold rounded-bl-lg">YAML</span>
-                    <code>
-{
-  "openapi": "3.0.0",
-  "info": { "title": "Weather API", "version": "1.0.0" },
-  "paths": {
-    "/weather": { "get": { "summary": "Get current weather" } }
-  }
-}
-                    </code>
+                    <code>{`openapi: 3.0.0
+info:
+  title: Weather API
+  version: 1.0.0
+paths:
+  /weather:
+    get:
+      summary: Get current weather`}</code>
                   </pre>
                 </div>
               </div>
@@ -257,15 +251,13 @@ const WebServicesExplanation = () => {
                 </ul>
                 <pre className="bg-gray-900 text-white p-3 rounded-md text-sm overflow-x-auto relative" data-lang="XML">
                   <span className="absolute top-0 right-0 bg-indigo-500 text-white px-2 py-1 text-xs font-semibold rounded-bl-lg">XML</span>
-                  <code>
-&lt;soap:Envelope&gt;
-  &lt;soap:Body&gt;
-    &lt;getBalance&gt;
-      &lt;accountNumber&gt;12345&lt;/accountNumber&gt;
-    &lt;/getBalance&gt;
-  &lt;/soap:Body&gt;
-&lt;/soap:Envelope&gt;
-                  </code>
+                  <code>{`<soap:Envelope>
+  <soap:Body>
+    <getBalance>
+      <accountNumber>12345</accountNumber>
+    </getBalance>
+  </soap:Body>
+</soap:Envelope>`}</code>
                 </pre>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-green-500">
@@ -279,14 +271,12 @@ const WebServicesExplanation = () => {
                 </ul>
                 <pre className="bg-gray-900 text-white p-3 rounded-md text-sm overflow-x-auto relative" data-lang="JSON">
                   <span className="absolute top-0 right-0 bg-indigo-500 text-white px-2 py-1 text-xs font-semibold rounded-bl-lg">JSON</span>
-                  <code>
-GET https://api.weather.com/v1/current?city=Bangalore
+                  <code>{`GET https://api.weather.com/v1/current?city=Bangalore
 
 {
   "city": "Bangalore",
   "temperature": "28°C"
-}
-                  </code>
+}`}</code>
                 </pre>
               </div>
             </div>
@@ -298,14 +288,12 @@ GET https://api.weather.com/v1/current?city=Bangalore
               <div className="text-xl font-bold mb-2 text-gray-900">XML-RPC (Old RPC-style XML)</div>
               <pre className="bg-gray-900 text-white p-3 rounded-md text-sm overflow-x-auto relative" data-lang="XML">
                 <span className="absolute top-0 right-0 bg-indigo-500 text-white px-2 py-1 text-xs font-semibold rounded-bl-lg">XML</span>
-                <code>
-&lt;methodCall&gt;
-  &lt;methodName&gt;getWeather&lt;/methodName&gt;
-  &lt;params&gt;
-    &lt;param&gt;&lt;value&gt;&lt;string&gt;Bangalore&lt;/string&gt;&lt;/value&gt;&lt;/param&gt;
-  &lt;/params&gt;
-&lt;/methodCall&gt;
-                </code>
+                <code>{`<methodCall>
+  <methodName>getWeather</methodName>
+  <params>
+    <param><value><string>Bangalore</string></value></param>
+  </params>
+</methodCall>`}</code>
               </pre>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md border-2 border-gray-200 relative overflow-hidden">
@@ -314,14 +302,12 @@ GET https://api.weather.com/v1/current?city=Bangalore
               <div className="text-xl font-bold mb-2 text-gray-900">JSON-RPC (RPC-style JSON)</div>
               <pre className="bg-gray-900 text-white p-3 rounded-md text-sm overflow-x-auto relative" data-lang="JSON">
                 <span className="absolute top-0 right-0 bg-indigo-500 text-white px-2 py-1 text-xs font-semibold rounded-bl-lg">JSON</span>
-                <code>
-{
+                <code>{`{
   "jsonrpc": "2.0",
   "method": "getWeather",
   "params": ["Bangalore"],
   "id": 1
-}
-                </code>
+}`}</code>
               </pre>
             </div>
           </div>

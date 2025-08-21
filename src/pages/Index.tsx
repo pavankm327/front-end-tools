@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
 import { FaReact, FaNodeJs, FaLaravel, FaPython, FaDatabase, FaDocker } from "react-icons/fa";
 import { SiMongodb, SiTailwindcss } from "react-icons/si";
-import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
   const techStacks = [
@@ -28,22 +27,14 @@ const Index = () => {
           <h1 className="text-4xl font-extrabold mb-4 text-gray-900 dark:text-gray-100">
             🚀 Learn. Build. Grow.
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-xl text-gray-600 dark:text-gray-400">
             Master the modern tech stacks that power today’s world.  
             Stay motivated, keep building, and upgrade your skills every day!
           </p>
-          <Link to="/vite-explanation">
-            <Button
-              size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white"
-            >
-              Start Learning
-            </Button>
-          </Link>
         </div>
 
         {/* Tech Stacks Grid */}
-        <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
           {techStacks.map((tech, index) => (
             <div
               key={index}
@@ -57,7 +48,6 @@ const Index = () => {
           ))}
         </div>
       </main>
-      <MadeWithDyad />
     </div>
   );
 };

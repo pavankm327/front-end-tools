@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ViteExplanation from "./pages/ViteExplanation";
-import WebServicesExplanation from "./pages/WebServicesExplanation"; // Import the new page
+import WebServicesExplanation from "./pages/WebServices/WebServicesExplanation"; // Import the new page
 
 const queryClient = new QueryClient();
 
