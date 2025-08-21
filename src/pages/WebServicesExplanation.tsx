@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { MadeWithDyad } from "@/components/made-with-dyad";
 import { ArrowUp } from 'lucide-react';
 
 const WebServicesExplanation = () => {
@@ -365,11 +363,6 @@ paths:
           </div>
         </CardContent>
       </Card>
-
-      <footer className="bg-gray-800 text-white p-6 text-center w-full">
-        &copy; 2025 Web Services | Designed for Learning and Exploration
-      </footer>
-
       <button
         onClick={scrollToTop}
         className={`fixed bottom-8 right-8 bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-full w-14 h-14 flex items-center justify-center text-2xl shadow-lg transition-all duration-300 ${
@@ -379,7 +372,6 @@ paths:
       >
         <ArrowUp size={24} />
       </button>
-      <MadeWithDyad />
     </div>
   );
 };

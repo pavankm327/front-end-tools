@@ -15,7 +15,7 @@ const Header = () => {
             to="/"
             className="text-2xl font-bold text-blue-600 dark:text-blue-400"
           >
-            MyApp
+            CodeElevate
           </Link>
 
           {/* Desktop Menu */}

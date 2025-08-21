@@ -1,6 +1,4 @@
 // src/pages/Index.tsx
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
 import { FaReact, FaNodeJs, FaLaravel, FaPython, FaDatabase, FaDocker } from "react-icons/fa";
 import { SiMongodb, SiTailwindcss } from "react-icons/si";
