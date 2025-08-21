@@ -111,7 +111,7 @@ Your Code (React/Vue/JS/TS)
 
           <section>
             <h2 className="text-2xl font-bold mb-4 text-primary dark:text-primary-foreground">What is a Bundler?</h2>
-            <p className="mb-2">Got it 👍 let’s first clear up what a bundler is in very simple words:</p>
+            <p className="mb-2">Let’s first clear up what a bundler is in very simple words:</p>
             <h3 className="text-xl font-semibold mb-2">🔹 What is a Bundler?</h3>
             <p className="mb-2">When you build a web app, your code isn’t just one file. You have:</p>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm text-gray-600 dark:text-gray-400">
