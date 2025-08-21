@@ -269,7 +269,7 @@ bundle.css
 
           <section>
             <h2 className="text-2xl font-bold mb-4 text-primary dark:text-primary-foreground">Why Vite Skips Bundling in Dev: Modern Browsers + ES Modules</h2>
-            <p className="mb-2">Nice 🔥 this is the secret sauce of Vite → it skips bundling in dev because of modern browsers + ES modules. Let’s break it down:</p>
+            <p className="mb-2">This is the secret sauce of Vite → it skips bundling in dev because of modern browsers + ES modules. Let’s break it down:</p>
 
             <h3 className="text-xl font-semibold mb-2">🔹 Old days (before ES modules in browsers)</h3>
             <p className="mb-2">Browsers couldn’t understand `import / export` directly.</p>
