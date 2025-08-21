@@ -28,7 +28,6 @@ const WebServicesExplanation = () => {
     <div className="min-h-screen flex flex-col items-center bg-gradient-to-br from-indigo-500 to-purple-600 p-4 sm:p-8">
       <Card className="w-full max-w-6xl shadow-2xl rounded-xl overflow-hidden my-8">
         <CardHeader className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 text-center relative overflow-hidden">
-          {/* Removed complex SVG background to fix parsing errors */}
           <CardTitle className="text-5xl font-extrabold mb-4 relative z-10">🌐 Understanding Web Services</CardTitle>
           <p className="text-xl opacity-90 font-light relative z-10">A Comprehensive Guide to Modern Service Architecture</p>
         </CardHeader>
