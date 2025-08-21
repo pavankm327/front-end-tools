@@ -167,7 +167,7 @@ bundle.css
 
           <section>
             <h2 className="text-2xl font-bold mb-4 text-primary dark:text-primary-foreground">Vite vs Webpack Bundling</h2>
-            <p className="mb-2">Perfect 👍 Let’s compare Vite vs Webpack in terms of bundling.</p>
+            <p className="mb-2">Let’s compare Vite vs Webpack in terms of bundling.</p>
 
             <h3 className="text-xl font-semibold mb-2">🔹 How Webpack Works (Traditional Bundler)</h3>
             <h4 className="text-lg font-semibold mb-2">Development Mode:</h4>
