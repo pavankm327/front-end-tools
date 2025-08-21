@@ -42,7 +42,7 @@ const ViteExplanation = () => {
 
           <section>
             <h2 className="text-2xl font-bold mb-4 text-primary dark:text-primary-foreground">How Vite Works?</h2>
-            <p className="mb-2">Great question 👌 Let’s break down how Vite works step by step in simple English:</p>
+            <p className="mb-2">Let’s break down how Vite works step by step in simple English:</p>
             <h3 className="text-xl font-semibold mb-2">1. Two Modes: Development & Production</h3>
             <p className="mb-4">Vite behaves differently when you are coding (development) vs when you are ready to deploy (production).</p>
 
