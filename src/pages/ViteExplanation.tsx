@@ -228,7 +228,7 @@ bundle.css
 
           <section>
             <h2 className="text-2xl font-bold mb-4 text-primary dark:text-primary-foreground">Real-World Example: Code Change Handling</h2>
-            <p className="mb-2">Awesome 👍 Let’s walk through a real-world example with a small React app.</p>
+            <p className="mb-2">Let’s walk through a real-world example with a small React app.</p>
             <h3 className="text-xl font-semibold mb-2">📝 Scenario:</h3>
             <p className="mb-2">You have a React app with:</p>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm text-gray-600 dark:text-gray-400">
