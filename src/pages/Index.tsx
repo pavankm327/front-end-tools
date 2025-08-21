@@ -8,7 +8,7 @@ const Index = () => {
       <div className="text-center bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
         <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">Welcome to Your Blank App</h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-          Start building your amazing project here!
+          Let's understand how vite works!
         </p>
         <Link to="/vite-explanation">
           <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
