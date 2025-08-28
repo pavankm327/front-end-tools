@@ -6,7 +6,7 @@ const WebhookExplained = () => {
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
         <header className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white text-center p-12 relative">
           <h1 className="text-4xl font-extrabold mb-2 select-none">🔔 Webhooks – Explained</h1>
-          <p className="text-lg opacity-90 select-none">A workshop guide to event-driven automation</p>
+          <p className="text-lg opacity-90 select-none">A guide to event-driven automation</p>
         </header>
 
         <main className="px-10 py-12 space-y-14 text-gray-800">
