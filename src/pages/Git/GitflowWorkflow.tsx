@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Separator } from "@/components/ui/separator";
 
@@ -195,6 +196,7 @@ git push -u origin hotfix/1.0.1
         </div>
       </main>
       <ScrollToTop />
+      <Footer />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 // src/pages/Index.tsx
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import { FaReact, FaNodeJs, FaLaravel, FaPython, FaDatabase, FaDocker } from "react-icons/fa";
 import { SiMongodb, SiTailwindcss } from "react-icons/si";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -48,6 +49,7 @@ const Index = () => {
         </div>
       </main>
       <ScrollToTop />
+      <Footer />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from "@/components/layout/Header";
+import Footer from '@/components/layout/Footer';
 import ScrollToTop from "@/components/ScrollToTop";
 import { Separator } from "@/components/ui/separator";
 
@@ -495,6 +496,7 @@ Your Code (TS / JSX / Vue / Modern JS)
         </div>
       </main>
       <ScrollToTop />
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from "@/components/layout/Header";
-import { MadeWithDyad } from "@/components/made-with-dyad";
+import Footer from "@/components/layout/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Separator } from "@/components/ui/separator";
 
 const LayoutSetup = () => {
@@ -805,8 +806,8 @@ class Home extends BaseController
     </div>
 </footer>`}</code>
               </pre>
+              </div>
             </div>
-          </div>
 
           {/* Content View */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow mb-6">
@@ -977,7 +978,8 @@ class Home extends Controller
                 </pre>
               </div>
             </div>
-          </div>
+            </div>
+          </section>
           {/* Conclusion */}
           <section className="bg-green-50 border border-green-300 p-6 rounded-lg shadow">
             <h3 className="font-bold text-lg mb-2 text-green-800">✅ Summary</h3>
@@ -989,7 +991,8 @@ class Home extends Controller
           </section>
         </div>
       </main>
-      <MadeWithDyad />
+      <ScrollToTop />
+      <Footer />
     </div>
   );
 };

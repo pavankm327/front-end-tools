@@ -2,24 +2,21 @@ import React, { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
 
 interface ScrollToTopProps {
-  onScrollToTop?: () => void; // optional, defaults to internal smooth scroll
+  onScrollToTop?: () => void;
 }
 
 const ScrollToTop: React.FC<ScrollToTopProps> = ({ onScrollToTop }) => {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollToTop(window.scrollY > 200); // Show button after 200px scroll
-    };
-
+    const handleScroll = () => setShowScrollToTop(window.scrollY > 200);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleClick = () => {
     if (onScrollToTop) {
-      onScrollToTop(); // use custom scroll function if provided
+      onScrollToTop();
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from '@/components/layout/Header';
-import { ArrowUp } from 'lucide-react';
+import Footer from '@/components/layout/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 
 const WebServicesExplanation = () => {
@@ -348,6 +348,7 @@ paths:
         </div>
       </main>
       <ScrollToTop />
+      <Footer />
     </div>
   );
 };

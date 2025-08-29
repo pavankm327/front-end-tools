@@ -1,4 +1,3 @@
-// src/components/layout/Header.tsx
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -11,15 +10,19 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <Link
-            to="/"
-            className="text-2xl font-bold text-blue-600 dark:text-blue-400"
-          >
-            CodeElevate
+          <Link to="/" className="flex items-center space-x-2">
+            <img
+              src="/logo/logo_dark.png"
+              alt="CodeElevate Logo"
+              className="h-14 w-auto rounded-md p-0"
+            />
+            <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+              CodeElevate
+            </span>
           </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden md:flex space-x-6">
+          <nav className="hidden lg:flex space-x-6">
             <Link
               to="/"
               className="text-gray-700 dark:text-gray-200 hover:text-blue-600"
@@ -73,7 +76,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-700 dark:text-gray-200"
+            className="lg:hidden text-gray-700 dark:text-gray-200"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -82,7 +85,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="md:hidden bg-white dark:bg-gray-800 px-4 pb-4 space-y-2">
+        <nav className="lg:hidden bg-white dark:bg-gray-800 px-4 pb-4 space-y-2">
           <Link
             to="/"
             className="block text-gray-700 dark:text-gray-200 hover:text-blue-600"
@@ -112,17 +115,17 @@ const Header = () => {
             Webhook
           </Link>
           <Link
-              to="/gitflow-workflow"
-              className="block text-gray-700 dark:text-gray-200 hover:text-blue-600"
-              onClick={() => setIsOpen(false)}
-            >
+            to="/gitflow-workflow"
+            className="block text-gray-700 dark:text-gray-200 hover:text-blue-600"
+            onClick={() => setIsOpen(false)}
+          >
             Gitflow Workflow
           </Link>
           <Link
-              to="/ci-4"
-              className="block text-gray-700 dark:text-gray-200 hover:text-blue-600"
-              onClick={() => setIsOpen(false)}
-            >
+            to="/ci-4"
+            className="block text-gray-700 dark:text-gray-200 hover:text-blue-600"
+            onClick={() => setIsOpen(false)}
+          >
             CodeIgniter 4
           </Link>
           <Link
