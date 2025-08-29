@@ -8,6 +8,8 @@ import NotFound from "./pages/NotFound";
 import ViteExplanation from "./pages/ViteExplanation";
 import WebServicesExplanation from "./pages/WebServicesExplanation";
 import WebhookExplained from "./pages/WebhookExplained";
+import GitflowWorkflow from "./pages/Git/GitflowWorkflow";
+import LayoutSetup from "./pages/CodeIgniter/LayoutSetup";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +24,8 @@ const App = () => (
           <Route path="/vite-explanation" element={<ViteExplanation />} />
           <Route path="/web-services-explanation" element={<WebServicesExplanation />} />
           <Route path="/webhook" element={<WebhookExplained />} />
+          <Route path="/gitflow-workflow" element={<GitflowWorkflow />} />
+          <Route path="/ci-4" element={<LayoutSetup />} />
           {/* Add more routes as needed */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

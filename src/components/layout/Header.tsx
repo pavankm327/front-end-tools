@@ -45,6 +45,18 @@ const Header = () => {
               Webhook
             </Link>
             <Link
+              to="/gitflow-workflow"
+              className="text-gray-700 dark:text-gray-200 hover:text-blue-600"
+            >
+              Gitflow Workflow
+            </Link>
+            <Link
+              to="/ci-4"
+              className="text-gray-700 dark:text-gray-200 hover:text-blue-600"
+            >
+              CodeIgniter 4
+            </Link>
+            <Link
               to="/about"
               className="text-gray-700 dark:text-gray-200 hover:text-blue-600"
             >
@@ -98,6 +110,20 @@ const Header = () => {
             onClick={() => setIsOpen(false)}
           >
             Webhook
+          </Link>
+          <Link
+              to="/gitflow-workflow"
+              className="block text-gray-700 dark:text-gray-200 hover:text-blue-600"
+              onClick={() => setIsOpen(false)}
+            >
+            Gitflow Workflow
+          </Link>
+          <Link
+              to="/ci-4"
+              className="block text-gray-700 dark:text-gray-200 hover:text-blue-600"
+              onClick={() => setIsOpen(false)}
+            >
+            CodeIgniter 4
           </Link>
           <Link
             to="/about"
