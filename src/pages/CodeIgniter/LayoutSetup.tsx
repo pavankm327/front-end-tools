@@ -18,7 +18,7 @@ const LayoutSetup = () => {
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400">Installation, Native Layouts & Blade Templating</p>
             {/* Navigation */}
-            <nav className="bg-indigo-800 text-white shadow-sm">
+        <nav className="bg-indigo-800 text-white shadow-sm hidden">
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                 <div className="text-lg font-semibold">CI4 Guide</div>
 
