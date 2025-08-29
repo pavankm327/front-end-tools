@@ -1,36 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Header from '@/components/layout/Header';
 import { ArrowUp } from 'lucide-react';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const WebServicesExplanation = () => {
-  const [showScrollToTop, setShowScrollToTop] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowScrollToTop(true);
-      } else {
-        setShowScrollToTop(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
-    <div className="min-h-screen flex flex-col items-center bg-gradient-to-br from-indigo-500 to-purple-600 p-4 sm:p-8">
-      <Card className="w-full max-w-6xl shadow-2xl rounded-xl overflow-hidden my-8">
-        <CardHeader className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 text-center relative overflow-hidden">
-          <CardTitle className="text-5xl font-extrabold mb-4 relative z-10">🌐 Understanding Web Services</CardTitle>
-          <p className="text-xl opacity-90 font-light relative z-10">A Comprehensive Guide to Modern Service Architecture</p>
-        </CardHeader>
+    <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-gray-900">
+      <Header />
+      <main className="flex-grow container mx-auto px-4 py-8 pt-24">
+        <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 space-y-6">
+          <h1 className="text-4xl font-extrabold mb-2 select-none">🌐 Understanding Web Services</h1>
+          <p className="text-lg opacity-90 select-none">A Comprehensive Guide to Modern Service Architecture</p>
+      
 
-        <CardContent className="p-6 space-y-8 text-gray-800 dark:text-gray-200">
+        <section className="p-6 space-y-8 text-gray-800 dark:text-gray-200">
           <div className="bg-gradient-to-br from-blue-50 to-purple-50 border-l-8 border-indigo-500 p-6 my-8 rounded-r-xl shadow-md relative">
             <span className="absolute -top-4 -left-4 bg-indigo-500 rounded-full w-10 h-10 flex items-center justify-center text-white text-2xl font-bold">💡</span>
             <strong className="text-lg text-indigo-700">What are Web Services?</strong><br />
@@ -361,17 +344,10 @@ paths:
               </div>
             </div>
           </div>
-        </CardContent>
-      </Card>
-      <button
-        onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-full w-14 h-14 flex items-center justify-center text-2xl shadow-lg transition-all duration-300 ${
-          showScrollToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-        }`}
-        title="Scroll to top"
-      >
-        <ArrowUp size={24} />
-      </button>
+          </section>
+        </div>
+      </main>
+      <ScrollToTop />
     </div>
   );
 };

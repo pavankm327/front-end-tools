@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from "@/components/layout/Header";
-import { MadeWithDyad } from "@/components/made-with-dyad";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Separator } from "@/components/ui/separator";
 
 const GitflowWorkflow = () => {
@@ -194,7 +194,7 @@ git push -u origin hotfix/1.0.1
           </section>
         </div>
       </main>
-      <MadeWithDyad />
+      <ScrollToTop />
     </div>
   );
 };

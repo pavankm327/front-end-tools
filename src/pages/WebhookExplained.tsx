@@ -1,16 +1,15 @@
 import React from "react";
+import Header from "@/components/layout/Header";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const WebhookExplained = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-200 to-purple-200 font-inter p-6">
-      <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
-        <header className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white text-center p-12 relative">
+    <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-gray-900">
+      <Header />
+      <main className="flex-grow container mx-auto px-4 py-8 pt-24">
+        <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 space-y-6">
           <h1 className="text-4xl font-extrabold mb-2 select-none">🔔 Webhooks – Explained</h1>
           <p className="text-lg opacity-90 select-none">A guide to event-driven automation</p>
-        </header>
-
-        <main className="px-10 py-12 space-y-14 text-gray-800">
-
           {/* Definition */}
           <section>
             <h2 className="text-indigo-700 text-3xl font-semibold mb-4">Definition</h2>
@@ -283,10 +282,11 @@ class WebhookController extends Controller
               <li>Commonly used for payments, alerts, deployments, and notifications.</li>
               <li>Security is crucial: use signatures, HTTPS, rate-limiting, and idempotency.</li>
               <li>Think of webhooks as <em>"let the server tell me what happens exactly when it happens."</em></li>
-            </ul>
+            </ul>    
           </section>
-        </main>
-      </div>
+        </div>
+      </main>
+      <ScrollToTop />
     </div>
   );
 };

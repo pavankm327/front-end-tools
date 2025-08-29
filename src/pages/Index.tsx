@@ -2,6 +2,7 @@
 import Header from "@/components/layout/Header";
 import { FaReact, FaNodeJs, FaLaravel, FaPython, FaDatabase, FaDocker } from "react-icons/fa";
 import { SiMongodb, SiTailwindcss } from "react-icons/si";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   const techStacks = [
@@ -46,6 +47,7 @@ const Index = () => {
           ))}
         </div>
       </main>
+      <ScrollToTop />
     </div>
   );
 };

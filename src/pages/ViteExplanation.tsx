@@ -1,16 +1,15 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Header from "@/components/layout/Header";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Separator } from "@/components/ui/separator";
 
 const ViteExplanation = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900 p-4 sm:p-8">
-      <Card className="w-full max-w-4xl shadow-lg rounded-lg overflow-hidden">
-        <CardHeader className="bg-primary text-primary-foreground p-6">
-          <CardTitle className="text-3xl font-extrabold text-center">Understanding Vite</CardTitle>
-        </CardHeader>
-        <CardContent className="p-6 space-y-8 text-gray-800 dark:text-gray-200">
-
+    <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-gray-900">
+      <Header />
+      <main className="flex-grow container mx-auto px-4 py-8 pt-24">
+        <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 space-y-6">
+          <h1 className="text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-6">Understanding Vite</h1>
           <section>
             <h2 className="text-2xl font-bold mb-4 text-primary dark:text-primary-foreground">Explain Vite in Simple English</h2>
             <p className="mb-2">Let’s keep it very simple.</p>
@@ -493,8 +492,9 @@ Your Code (TS / JSX / Vue / Modern JS)
               <li>Rollup = master craftsman 🪚 (polished final product).</li>
             </ul>
           </section>
-        </CardContent>
-      </Card>
+        </div>
+      </main>
+      <ScrollToTop />
     </div>
   );
 };
