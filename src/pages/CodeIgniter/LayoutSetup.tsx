@@ -17,9 +17,30 @@ const LayoutSetup = () => {
             <span>CodeIgniter 4</span>
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400">Installation, Native Layouts & Blade Templating</p>
+            {/* Navigation */}
+            <nav className="bg-indigo-800 text-white shadow-sm">
+            <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                <div className="text-lg font-semibold">CI4 Guide</div>
 
-          <Separator />
+                {/* Hamburger (mobile only) */}
+                <button id="menu-btn" className="md:hidden block focus:outline-none">
+                <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" 
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                </button>
 
+                {/* Menu items */}
+                <ul id="menu" className="hidden flex-col space-y-2 mt-4 md:mt-0 md:flex md:flex-row md:space-y-0 md:space-x-6">
+                <li><a href="#install" className="hover:text-indigo-200 transition">Installation</a></li>
+                <li><a href="#native" className="hover:text-indigo-200 transition">Native Layouts</a></li>
+                <li><a href="#routing" className="hover:text-indigo-200 transition">Routing</a></li>
+                <li><a href="#blade" className="hover:text-indigo-200 transition">Blade Templating</a></li>
+                </ul>
+            </div>
+        </nav>
+        <Separator />
           {/* Intro */}
           <section className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
             <p className="text-gray-700 dark:text-gray-300">This comprehensive guide covers the <strong>installation of CodeIgniter 4</strong>, setting up <strong>layouts using the native view system</strong>, and integrating <strong>Blade templating</strong> for layouts. By the end of this guide, you'll have a fully functional CodeIgniter 4 application with both native and Blade templating options.</p>
