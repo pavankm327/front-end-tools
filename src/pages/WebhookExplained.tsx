@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import Footer from "@/components/layout/Footer"; // Import Footer
 import ScrollToTop from "@/components/ScrollToTop";
 
 const WebhookExplained = () => {
@@ -34,7 +34,6 @@ const WebhookExplained = () => {
                 className="max-w-xl w-full h-auto"
                 role="img"
                 aria-label="Webhook architecture diagram"
-                style={{ minWidth: 320 }}
               >
                 {/* Provider node */}
                 <rect x="35" y="35" rx="20" width="180" height="70" fill="#7266e4" />
@@ -154,42 +153,44 @@ Content-Type: application/json
           {/* Comparison Table */}
           <section>
             <h2 className="text-indigo-700 text-3xl font-semibold mb-6">📌 Webhooks vs. APIs: Key Differences</h2>
-            <table className="w-full border-collapse text-left shadow-md rounded-lg overflow-hidden">
-              <thead className="bg-indigo-600 text-white font-semibold text-lg">
-                <tr>
-                  <th className="p-4">Feature</th>
-                  <th className="p-4">Webhooks (Push)</th>
-                  <th className="p-4">APIs (Pull)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-indigo-50">
-                  <td className="p-4 font-medium">Direction</td>
-                  <td className="p-4">Server → Client (automatic)</td>
-                  <td className="p-4">Client → Server (on request)</td>
-                </tr>
-                <tr>
-                  <td className="p-4 font-medium">Communication</td>
-                  <td className="p-4">Real-time push</td>
-                  <td className="p-4">Request-response</td>
-                </tr>
-                <tr className="bg-indigo-50">
-                  <td className="p-4 font-medium">Use Case</td>
-                  <td className="p-4">Event notifications (payments, alerts)</td>
-                  <td className="p-4">Fetching or updating data anytime</td>
-                </tr>
-                <tr>
-                  <td className="p-4 font-medium">Setup</td>
-                  <td className="p-4">Requires public webhook endpoint</td>
-                  <td className="p-4">Requires API key & manual request</td>
-                </tr>
-                <tr className="bg-indigo-50">
-                  <td className="p-4 font-medium">Example</td>
-                  <td className="p-4">Payment success alert is pushed</td>
-                  <td className="p-4">App fetches user profile</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto"> {/* Added overflow-x-auto here */}
+              <table className="w-full border-collapse text-left shadow-md rounded-lg overflow-hidden">
+                <thead className="bg-indigo-600 text-white font-semibold text-lg">
+                  <tr>
+                    <th className="p-4">Feature</th>
+                    <th className="p-4">Webhooks (Push)</th>
+                    <th className="p-4">APIs (Pull)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-indigo-50">
+                    <td className="p-4 font-medium">Direction</td>
+                    <td className="p-4">Server → Client (automatic)</td>
+                    <td className="p-4">Client → Server (on request)</td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 font-medium">Communication</td>
+                    <td className="p-4">Real-time push</td>
+                    <td className="p-4">Request-response</td>
+                  </tr>
+                  <tr className="bg-indigo-50">
+                    <td className="p-4 font-medium">Use Case</td>
+                    <td className="p-4">Event notifications (payments, alerts)</td>
+                    <td className="p-4">Fetching or updating data anytime</td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 font-medium">Setup</td>
+                    <td className="p-4">Requires public webhook endpoint</td>
+                    <td className="p-4">Requires API key & manual request</td>
+                  </tr>
+                  <tr className="bg-indigo-50">
+                    <td className="p-4 font-medium">Example</td>
+                    <td className="p-4">Payment success alert is pushed</td>
+                    <td className="p-4">App fetches user profile</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
 
           {/* Use Cases */}
@@ -288,7 +289,7 @@ class WebhookController extends Controller
         </div>
       </main>
       <ScrollToTop />
-      <Footer />
+      <Footer /> {/* Using Footer component */}
     </div>
   );
 };

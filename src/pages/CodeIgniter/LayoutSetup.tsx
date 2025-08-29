@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import Footer from "@/components/layout/Footer"; // Import Footer
 import ScrollToTop from "@/components/ScrollToTop";
 import { Separator } from "@/components/ui/separator";
 
@@ -827,8 +827,8 @@ class Home extends BaseController
     </div>
 </footer>`}</code>
               </pre>
-              </div>
             </div>
+          </div>
 
           {/* Content View */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow mb-6">
@@ -944,8 +944,8 @@ class Home extends Controller
         echo $this->blade->make('blade.pages.contact', $data)->render();
     }
 }`}</code>
-            </pre>
-          </div>
+              </pre>
+            </div>
 
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow mb-6">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">🛠 Troubleshooting Blade Integration</h3>
@@ -1013,7 +1013,7 @@ class Home extends Controller
         </div>
       </main>
       <ScrollToTop />
-      <Footer />
+      <Footer /> {/* Using Footer component */}
     </div>
   );
 };
