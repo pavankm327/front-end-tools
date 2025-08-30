@@ -1012,7 +1012,6 @@ class Home extends Controller
         </div>
       </main>
       <ScrollToTop />
-      <Footer /> {/* Using Footer component */}
     </div>
   );
 };
