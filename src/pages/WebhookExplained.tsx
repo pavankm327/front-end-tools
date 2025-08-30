@@ -1,5 +1,5 @@
 import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer"; // Import Footer
+import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const WebhookExplained = () => {
@@ -90,7 +90,10 @@ const WebhookExplained = () => {
                 <p>
                   <span className="font-medium">Definition:</span> An HTTP endpoint (normally a POST route) in your server that receives event notifications.
                   <br />
-                  <span className="font-medium">Example:</span> <code className="bg-slate-100 px-1 rounded">https://myapp.com/webhooks/payment</code>
+                  <span className="font-medium">Example:</span>
+                  <p className="overflow-x-auto">
+                    <code className="bg-slate-100 px-1 rounded">https://myapp.com/webhooks/payment</code>
+                  </p>
                 </p>
               </div>
 
@@ -288,7 +291,7 @@ class WebhookController extends Controller
         </div>
       </main>
       <ScrollToTop />
-      <Footer /> {/* Using Footer component */}
+      <Footer />
     </div>
   );
 };

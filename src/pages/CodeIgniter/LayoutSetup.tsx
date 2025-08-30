@@ -270,7 +270,7 @@ chmod -R 777 /path/to/project/writable`}</code>
             {/* Layout */}
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow mb-6">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Step 1: Create Main Layout File</h3>
-              <p className="mb-4 text-gray-700 dark:text-gray-300">Create <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/layouts/default.php</code>:</p>
+              <p className="mb-4 text-gray-700 dark:text-gray-300 overflow-x-auto">Create <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/layouts/default.php</code>:</p>
               <pre className="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-x-auto">
                 <code>{`<!DOCTYPE html>
 <html lang="en">
@@ -327,7 +327,7 @@ chmod -R 777 /path/to/project/writable`}</code>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Step 2: Create Partial Views</h3>
 
               <div>
-                <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100">Header Partial: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/partials/header.php</code></h4>
+                <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100 overflow-x-auto">Header Partial: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/partials/header.php</code></h4>
                 <pre className="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-x-auto">
                   <code>{`<header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -361,7 +361,7 @@ chmod -R 777 /path/to/project/writable`}</code>
               </div>
 
               <div>
-                <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100">Footer Partial: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/partials/footer.php</code></h4>
+                <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100 overflow-x-auto">Footer Partial: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/partials/footer.php</code></h4>
                 <pre className="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-x-auto">
                   <code>{`<footer class="bg-dark text-white mt-5 py-4">
     <div class="container">
@@ -384,7 +384,7 @@ chmod -R 777 /path/to/project/writable`}</code>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Step 3: Create Content Views</h3>
 
               <div className="mb-4">
-                <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100">Home Page: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/pages/home.php</code></h4>
+                <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100 overflow-x-auto">Home Page: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/pages/home.php</code></h4>
                 <pre className="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-x-auto">
                   <code>{`<?= $this->extend('layouts/default') ?>
 
@@ -435,7 +435,7 @@ Welcome to our CodeIgniter 4 application homepage
               </div>
 
               <div>
-                <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100">Sidebar Partial: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/partials/sidebar.php</code></h4>
+                <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100 overflow-x-auto">Sidebar Partial: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/partials/sidebar.php</code></h4>
                 <pre className="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-x-auto">
                   <code>{`<div class="card">
     <div class="card-header">
@@ -456,7 +456,7 @@ Welcome to our CodeIgniter 4 application homepage
             {/* Controller */}
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow mb-6">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Step 4: Update Controller</h3>
-              <p className="mb-4 text-gray-700 dark:text-gray-300">Update <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Controllers/Home.php</code>:</p>
+              <p className="mb-4 text-gray-700 dark:text-gray-300 overflow-x-auto">Update <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Controllers/Home.php</code>:</p>
               <pre className="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-x-auto">
                 <code>{`<?php
 namespace App\\Controllers;
@@ -540,7 +540,7 @@ return view('page', $data, ['cache' => 300]); // Cache for 5 minutes`}</code>
 
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow mb-6">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Setting Up Routes</h3>
-              <p className="mb-4 text-gray-700 dark:text-gray-300">Update <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Config/Routes.php</code>:</p>
+              <p className="mb-4 text-gray-700 dark:text-gray-300 overflow-x-auto">Update <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Config/Routes.php</code>:</p>
               <pre className="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-x-auto">
                 <code>{`<?php
 use CodeIgniter\\Router\\RouteCollection;
@@ -571,8 +571,12 @@ $routes->setAutoRoute(true);`}</code>
           <section id="blade">
             <h2 className="text-2xl font-bold text-blue-700 dark:text-blue-400 mb-4">4. Blade Templating Integration</h2>
 
-            <p className="mb-6 text-gray-700 dark:text-gray-300">We can use <a href="https://github.com/EFTEC/BladeOne" target="_blank" className="text-blue-600 hover:underline">eftec/bladeone</a> to bring Laravel-like Blade templating to CI4.</p>
-
+            <p className="mb-6 text-gray-700 dark:text-gray-300">We can use
+              <a href="https://github.com/EFTEC/BladeOne" target="_blank"
+                className="text-blue-600 hover:underline">eftec/bladeone
+              </a> to bring Laravel-like Blade templating to CI4.
+            </p>
+            
             {/* Install */}
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow mb-6">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Step 1: Install Package</h3>
@@ -720,7 +724,7 @@ class Home extends BaseController
             {/* Layout */}
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow mb-6">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Step 2: Create Blade Layout File</h3>
-              <p className="mb-4 text-gray-700 dark:text-gray-300">Create <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/blade/layouts/app.blade.php</code>:</p>
+              <p className="mb-4 text-gray-700 dark:text-gray-300 overflow-x-auto">Create <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/blade/layouts/app.blade.php</code>:</p>
               <pre className="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-x-auto">
                 <code>{`<!DOCTYPE html> 
 <html lang="en">
@@ -777,7 +781,7 @@ class Home extends BaseController
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Step 3: Create Blade Partial Views</h3>
 
               <div>
-                <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100">Header Partial: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/blade/partials/header.blade.php</code></h4>
+                <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100 overflow-x-auto">Header Partial: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/blade/partials/header.blade.php</code></h4>
                 <pre className="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-x-auto">
                   <code>{`<header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -811,7 +815,7 @@ class Home extends BaseController
               </div>
 
               <div>
-                <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100">Footer Partial: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/blade/partials/footer.blade.php</code></h4>
+                <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100 overflow-x-auto">Footer Partial: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/blade/partials/footer.blade.php</code></h4>
                 <pre className="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-x-auto">
                   <code>{`<footer class="bg-dark text-white mt-5 py-4">
     <div class="container">
@@ -834,7 +838,7 @@ class Home extends BaseController
             <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Step 4: Create Blade Content Views</h3>
 
             <div className="mb-4">
-              <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100">Home Page: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/blade/pages/home.blade.php</code></h4>
+              <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100 overflow-x-auto">Home Page: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/blade/pages/home.blade.php</code></h4>
               <pre className="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-x-auto">
                 <code>{`<?php /** @var array $data */ ?>
 @extends('blade.layouts.app')
@@ -876,7 +880,7 @@ class Home extends BaseController
             </div>
 
             <div>
-              <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100">Sidebar Partial: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/blade/partials/sidebar.blade.php</code></h4>
+              <h4 className="font-medium mb-2 text-gray-900 dark:text-gray-100 overflow-x-auto">Sidebar Partial: <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Views/blade/partials/sidebar.blade.php</code></h4>
               <pre className="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-x-auto">
                 <code>{`<div class="card">
     <div class="card-header">
@@ -897,7 +901,7 @@ class Home extends BaseController
           {/* Controller */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow mb-6">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Step 5: Update Controller for Blade</h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">Update <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Controllers/Home.php</code>:</p>
+            <p className="mb-4 text-gray-700 dark:text-gray-300 overflow-x-auto">Update <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">app/Controllers/Home.php</code>:</p>
             <pre className="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-x-auto">
               <code>{`<?php  
 namespace App\\Controllers;
@@ -1012,6 +1016,7 @@ class Home extends Controller
         </div>
       </main>
       <ScrollToTop />
+      <Footer />
     </div>
   );
 };
