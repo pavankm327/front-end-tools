@@ -104,6 +104,18 @@ git push -u origin hotfix/1.0.1
 # Open PR: hotfix/1.0.1 → main AND hotfix/1.0.1 → develop`}</code>
                 </pre>
               </li>
+              <li>
+                <b className="font-semibold text-gray-900 dark:text-gray-100">Pull the feature branch without merging into dev</b>
+                <pre className="bg-gray-900 text-green-400 rounded-lg p-4 mt-2 overflow-auto text-sm">
+                  <code>{`git status
+git branch
+git branch -r (lists all remote branches)
+git checkout -b feature/new-feature-branch-name-on-local origin/feature/actual-branch-name-created-by-other-person(new feature branch is created pointing to the feature branch from remote)
+git checkout feature/new-feature-branch-name-on-local
+git pull origin feature/new-feature-branch-name-on-local(optional while pulling for the first time)
+                  `}</code>
+                </pre>
+              </li>
             </ol>
           </section>
 
