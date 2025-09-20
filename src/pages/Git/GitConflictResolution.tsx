@@ -216,6 +216,83 @@ main
 
           <Separator />
 
+          <section>
+            <h2 className="text-2xl font-bold text-blue-700 dark:text-blue-400 mb-3">
+              Scenario: Diverged Feature Branch
+            </h2>
+            <p className="text-gray-700 dark:text-gray-300 mb-2">
+              Your local branch <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded">feature/your-feature</code> 
+              has 3 commits the remote doesn't have, and the remote has 1 commit your branch doesn't have. This is a common divergence scenario.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
+              Step A: Fetch Latest Remote Changes
+            </h3>
+            <pre className="bg-gray-900 text-green-400 rounded-lg p-4 overflow-auto text-sm mb-4">
+              <code>{`git fetch origin`}</code>
+            </pre>
+
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
+              Step B: Rebase Local Branch (Linear History)
+            </h3>
+            <pre className="bg-gray-900 text-green-400 rounded-lg p-4 overflow-auto text-sm mb-4">
+              <code>{`git checkout feature/your-feature
+git rebase origin/feature/your-feature`}</code>
+            </pre>
+            <p className="text-gray-700 dark:text-gray-300 mb-2">
+              Resolve conflicts if any, then continue:
+            </p>
+            <pre className="bg-gray-900 text-green-400 rounded-lg p-4 overflow-auto text-sm mb-4">
+              <code>{`git add <file>
+git rebase --continue`}</code>
+            </pre>
+
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
+              Step C: Merge Alternative (Safe for Team Branches)
+            </h3>
+            <pre className="bg-gray-900 text-green-400 rounded-lg p-4 overflow-auto text-sm mb-4">
+              <code>{`git checkout feature/your-feature
+git merge origin/feature/your-feature`}</code>
+            </pre>
+
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
+              Step D: Push Updated Branch
+            </h3>
+            <pre className="bg-gray-900 text-green-400 rounded-lg p-4 overflow-auto text-sm mb-4">
+              <code>{`# After rebase (force push)
+git push origin feature/your-feature --force
+
+# After merge (normal push)
+git push origin feature/your-feature`}</code>
+            </pre>
+
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
+              Visual Representation
+            </h3>
+            <pre className="bg-gray-900 text-gray-100 rounded-lg p-4 overflow-auto text-sm mb-4">
+              <code>{`# Diverged commits
+origin/feature
+|
+└─ o <-- remote commit
+
+feature/your-feature
+|
+├─ x1
+├─ x2
+└─ x3 <-- local commits
+
+# After rebase, commits appear linear on top of remote
+feature/your-feature
+|
+└─ o
+   ├─ x1
+   ├─ x2
+   └─ x3`}</code>
+            </pre>
+          </section>
+          
+          <Separator />
+
           {/* Best Practices */}
           <section>
             <h2 className="text-2xl font-bold text-blue-700 dark:text-blue-400 mb-3">
