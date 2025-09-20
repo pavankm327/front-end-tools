@@ -54,6 +54,12 @@ const Header = () => {
               Gitflow Workflow
             </Link>
             <Link
+              to="/git-conflict-resolution"
+              className="text-gray-700 dark:text-gray-200 hover:text-blue-600"
+            >
+              Git Conflict Resolution
+            </Link>
+            <Link
               to="/ci-4"
               className="text-gray-700 dark:text-gray-200 hover:text-blue-600"
             >
@@ -120,6 +126,13 @@ const Header = () => {
             onClick={() => setIsOpen(false)}
           >
             Gitflow Workflow
+          </Link>
+          <Link
+            to="/git-conflict-resolution"
+            className="block text-gray-700 dark:text-gray-200 hover:text-blue-600"
+            onClick={() => setIsOpen(false)}
+          >
+            Git Conflict Resolution
           </Link>
           <Link
             to="/ci-4"
