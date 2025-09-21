@@ -1,9 +1,17 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, LogIn, LogOut } from "lucide-react"; // Import LogIn and LogOut icons
+import { useSession } from "@/integrations/supabase/session-context"; // Import useSession
+import { supabase } from "@/integrations/supabase/client"; // Import supabase client
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { session } = useSession(); // Get session from context
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    setIsOpen(false); // Close mobile menu after logout
+  };
 
   return (
     <header className="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10">
@@ -22,7 +30,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden lg:flex space-x-6">
+          <nav className="hidden lg:flex space-x-6 items-center">
             <Link
               to="/"
               className="text-gray-700 dark:text-gray-200 hover:text-blue-600"
@@ -77,6 +85,23 @@ const Header = () => {
             >
               Contact
             </Link>
+            {session ? (
+              <button
+                onClick={handleLogout}
+                className="flex items-center space-x-1 text-gray-700 dark:text-gray-200 hover:text-blue-600"
+              >
+                <LogOut size={18} />
+                <span>Logout</span>
+              </button>
+            ) : (
+              <Link
+                to="/login"
+                className="flex items-center space-x-1 text-gray-700 dark:text-gray-200 hover:text-blue-600"
+              >
+                <LogIn size={18} />
+                <span>Login</span>
+              </Link>
+            )}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -155,6 +180,22 @@ const Header = () => {
           >
             Contact
           </Link>
+          {session ? (
+            <button
+              onClick={handleLogout}
+              className="block w-full text-left text-gray-700 dark:text-gray-200 hover:text-blue-600"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link
+              to="/login"
+              className="block text-gray-700 dark:text-gray-200 hover:text-blue-600"
+              onClick={() => setIsOpen(false)}
+            >
+              Login
+            </Link>
+          )}
         </nav>
       )}
     </header>
