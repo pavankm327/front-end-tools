@@ -2,13 +2,15 @@ import React, { useEffect } from 'react';
 import { Auth } from '@supabase/auth-ui-react';
 import { ThemeSupa } from '@supabase/auth-ui-shared';
 import { supabase } from '@/integrations/supabase/client';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom'; // Import useSearchParams
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 
 const Login = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams(); // Get URL search parameters
+  const authView = searchParams.get('type') === 'recovery' ? 'update_password' : 'sign_in'; // Determine auth view
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
@@ -28,7 +30,7 @@ const Login = () => {
           <h1 className="text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-6">Login to CodeElevate</h1>
           <Auth
             supabaseClient={supabase}
-            providers={['google', 'facebook', 'github', 'bitbucket']}
+            providers={['google', 'github', 'bitbucket']}
             appearance={{
               theme: ThemeSupa,
               variables: {
@@ -42,6 +44,7 @@ const Login = () => {
             }}
             theme="light" // You can make this dynamic based on your app's theme
             redirectTo={window.location.origin} // Redirect to the current origin after auth
+            view={authView} // Set the view based on URL parameter
           />
         </div>
       </main>
