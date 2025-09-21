@@ -2,25 +2,30 @@ import React, { useEffect } from 'react';
 import { Auth } from '@supabase/auth-ui-react';
 import { ThemeSupa } from '@supabase/auth-ui-shared';
 import { supabase } from '@/integrations/supabase/client';
-import { useNavigate, useSearchParams } from 'react-router-dom'; // Import useSearchParams
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 
 const Login = () => {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams(); // Get URL search parameters
-  const authView = searchParams.get('type') === 'recovery' ? 'update_password' : 'sign_in'; // Determine auth view
+  const [searchParams] = useSearchParams();
+  const authView = searchParams.get('type') === 'recovery' ? 'update_password' : 'sign_in';
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      if (session) {
-        navigate('/'); // Redirect to home page after successful login
+      // Only redirect to home if it's not a password recovery flow
+      // and a session exists (meaning user is logged in or password updated)
+      if (session && authView !== 'update_password') {
+        navigate('/');
       }
+      // If it's a password recovery and a session exists, it means the token was valid.
+      // The Auth component should then display the update_password form.
+      // After the password is *actually* updated, the Auth component will handle the final redirect.
     });
 
     return () => subscription.unsubscribe();
-  }, [navigate]);
+  }, [navigate, authView]); // Add authView to dependencies
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-gray-900">
@@ -36,15 +41,16 @@ const Login = () => {
               variables: {
                 default: {
                   colors: {
-                    brand: 'hsl(222.2 47.4% 11.2%)', // Primary color from your Tailwind config
-                    brandAccent: 'hsl(210 40% 98%)', // Primary foreground
+                    brand: 'hsl(222.2 47.4% 11.2%)',
+                    brandAccent: 'hsl(210 40% 98%)',
                   },
                 },
               },
             }}
-            theme="light" // You can make this dynamic based on your app's theme
-            redirectTo={window.location.origin} // Redirect to the current origin after auth
-            view={authView} // Set the view based on URL parameter
+            theme="light"
+            // Redirect to the current URL to ensure all parameters are preserved for the Auth component
+            redirectTo={window.location.href}
+            view={authView}
           />
         </div>
       </main>
