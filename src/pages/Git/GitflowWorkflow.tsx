@@ -116,6 +116,17 @@ git pull origin feature/new-feature-branch-name-on-local(optional while pulling 
                   `}</code>
                 </pre>
               </li>
+              <li>
+                <b className="font-semibold text-gray-900 dark:text-gray-100">Delete the local feature branch after merging the PR into remote develop branch </b>
+                <pre className="bg-gray-900 text-green-400 rounded-lg p-4 mt-2 overflow-auto text-sm">
+                  <code>{`git status
+git branch
+git checkout develop
+git pull origin develop(pull the changes into local develop branch)
+git branch -d feature/new-feature-branch-name-on-local (Delete the feature branch)
+                  `}</code>
+                </pre>
+              </li>
             </ol>
           </section>
 

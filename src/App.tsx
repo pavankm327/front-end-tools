@@ -12,6 +12,9 @@ import WebServicesExplanation from "./pages/WebServicesExplanation";
 import WebhookExplained from "./pages/WebhookExplained";
 import GitflowWorkflow from "./pages/Git/GitflowWorkflow";
 import GitConflictResolution from "./pages/Git/GitConflictResolution";
+import GitPruneBranches from "./pages/Git/GitPruneBranches";
+import PRScenariosGuide from "./pages/Git/PRScenariosGuide";
+import BitbucketDraftPRGuide from "./pages/Git/BitbucketDraftPRGuide";
 import LayoutSetup from "./pages/CodeIgniter/LayoutSetup";
 import Login from "./pages/Login"; // Import Login page
 
@@ -32,6 +35,9 @@ const App = () => (
             <Route path="/webhook" element={<WebhookExplained />} />
             <Route path="/gitflow-workflow" element={<GitflowWorkflow />} />
             <Route path="/git-conflict-resolution" element={<GitConflictResolution />} />
+            <Route path="/git-prune-branches" element={<GitPruneBranches />} />
+            <Route path="/pr-scenarios-guide" element={<PRScenariosGuide />} />
+            <Route path="/bitbucket-draft-pr-guide" element={<BitbucketDraftPRGuide />} />
             <Route path="/ci-4" element={<LayoutSetup />} />
             <Route path="/login" element={<Login />} /> {/* Add the Login route */}
             {/* Add more routes as needed */}
