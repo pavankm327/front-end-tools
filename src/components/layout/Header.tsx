@@ -97,6 +97,12 @@ const Header = () => {
               {menuOpen["git"] && (
                 <div className="absolute mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded-md py-2 z-50">
                   <Link
+                    to="/git-commands-reference"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Git Commands
+                  </Link>
+                  <Link
                     to="/gitflow-workflow"
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
@@ -222,6 +228,7 @@ const Header = () => {
             </button>
             {menuOpen["git"] && (
               <div className="pl-4 mt-1 space-y-1">
+                <Link to="/git-commands-reference" onClick={() => setIsOpen(false)} className="block">Git Commands</Link>
                 <Link to="/gitflow-workflow" onClick={() => setIsOpen(false)} className="block">Gitflow Workflow</Link>
                 <Link to="/git-conflict-resolution" onClick={() => setIsOpen(false)} className="block">Git Conflict Resolution</Link>
                 <Link to="/git-prune-branches" onClick={() => setIsOpen(false)} className="block">Clean Up Stale Branches</Link>
