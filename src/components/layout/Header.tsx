@@ -126,6 +126,12 @@ const Header = () => {
                   >
                     Bitbucket Draft PR Guide
                   </Link>
+                  <Link
+                    to="/git-commit-am-guide"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Fix Unintended Commits
+                  </Link>
                 </div>
               )}
             </div>
@@ -221,6 +227,7 @@ const Header = () => {
                 <Link to="/git-prune-branches" onClick={() => setIsOpen(false)} className="block">Clean Up Stale Branches</Link>
                 <Link to="/pr-scenarios-guide" onClick={() => setIsOpen(false)} className="block">PR Scenarios Guide</Link>
                 <Link to="/bitbucket-draft-pr-guide" onClick={() => setIsOpen(false)} className="block">Bitbucket Draft PR Guide</Link>
+                <Link to="/git-commit-am-guide" onClick={() => setIsOpen(false)} className="block">Fix Unintended Commits</Link>
               </div>
             )}
           </div>
