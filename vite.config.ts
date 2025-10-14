@@ -8,10 +8,12 @@ export default defineConfig(() => ({
     host: "::",
     port: 8080,
   },
-  plugins: [dyadComponentTagger(), react()],
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      'components': path.resolve(__dirname, './src/components'),
+      'pages': path.resolve(__dirname, './src/pages'),
     },
   },
 }));
