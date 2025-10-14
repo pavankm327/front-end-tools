@@ -5,20 +5,22 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTopOnRouteChange from "@/components/ScrollToTopOnRouteChange";
 import { SessionContextProvider } from "@/integrations/supabase/session-context"; // Import SessionContextProvider
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import ViteExplanation from "./pages/ViteExplanation";
-import WebServicesExplanation from "./pages/WebServicesExplanation";
-import WebhookExplained from "./pages/WebhookExplained";
-import GitflowWorkflow from "./pages/Git/GitflowWorkflow";
-import GitConflictResolution from "./pages/Git/GitConflictResolution";
-import GitPruneBranches from "./pages/Git/GitPruneBranches";
-import PRScenariosGuide from "./pages/Git/PRScenariosGuide";
-import BitbucketDraftPRGuide from "./pages/Git/BitbucketDraftPRGuide";
-import GitCommitAmGuide from "./pages/Git/GitCommitAmGuide";
-import GitCommandsReference from "./pages/Git/GitCommandsReference";
-import LayoutSetup from "./pages/CodeIgniter/LayoutSetup";
-import Login from "./pages/Login"; // Import Login page
+import Index from "pages/Index";
+import NotFound from "pages/NotFound";
+import ViteExplanation from "pages/ViteExplanation";
+import WebServicesExplanation from "pages/WebServicesExplanation";
+import WebhookExplained from "pages/WebhookExplained";
+import GitflowWorkflow from "pages/Git/GitflowWorkflow";
+import GitConflictResolution from "pages/Git/GitConflictResolution";
+import GitPruneBranches from "pages/Git/GitPruneBranches";
+import PRScenariosGuide from "pages/Git/PRScenariosGuide";
+import BitbucketDraftPRGuide from "pages/Git/BitbucketDraftPRGuide";
+import GitCommitAmGuide from "pages/Git/GitCommitAmGuide";
+import GitCommandsReference from "pages/Git/GitCommandsReference";
+import LayoutSetup from "pages/CodeIgniter/LayoutSetup";
+import LaravelQueueWorkerGuide from "pages/Devops/LaravelQueueWorkerGuide";
+
+import Login from "pages/Login"; // Import Login page
 
 const queryClient = new QueryClient();
 
@@ -43,6 +45,7 @@ const App = () => (
             <Route path="/git-commit-am-guide" element={<GitCommitAmGuide />} />
             <Route path="/git-commands-reference" element={<GitCommandsReference />} />
             <Route path="/ci-4" element={<LayoutSetup />} />
+            <Route path="/laravel-queue-worker-guide" element={<LaravelQueueWorkerGuide />} />
             <Route path="/login" element={<Login />} /> {/* Add the Login route */}
             {/* Add more routes as needed */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
