@@ -13,7 +13,7 @@ const LayoutSetup = () => {
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 346" className="w-8 h-8 text-orange-600" fill="currentColor">
               <path d="M128 0s-27 92-78 147c-45 49-50 103-27 150 28 56 92 66 141 43 66-30 108-106 91-177-17-70-90-124-127-163zM88 290c-25-15-42-43-45-72-4-31 7-65 33-98-1 28 15 63 48 85-18-45 0-88 28-121-4 25-2 45 15 61 13 12 31 20 39 39 9 22 5 51-11 72-19 23-51 38-80 43-9 2-18-2-27-9z" />
             </svg>
-            <span>CodeIgniter 4</span>
+            <span>CodeIgniter</span>
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400">Installation, Native Layouts & Blade Templating</p>
             {/* Navigation */}
