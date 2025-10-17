@@ -18,7 +18,10 @@ import BitbucketDraftPRGuide from "pages/Git/BitbucketDraftPRGuide";
 import GitCommitAmGuide from "pages/Git/GitCommitAmGuide";
 import GitCommandsReference from "pages/Git/GitCommandsReference";
 import LayoutSetup from "pages/CodeIgniter/LayoutSetup";
-import LaravelQueueWorkerGuide from "pages/Devops/LaravelQueueWorkerGuide";
+import LaravelQueueWorkerGuide from "@/pages/Laravel/LaravelQueueWorkerGuide";
+import LaravelConcetps from "@/pages/Laravel/LaravelConcepts";
+import LaravelUtilityClassGuide from "@/pages/Laravel/LaravelUtilityClassGuide";
+import GitFeatureBranchRebase from "@/pages/Git/GitFeatureBranchRebase";
 
 import Login from "pages/Login"; // Import Login page
 
@@ -44,8 +47,11 @@ const App = () => (
             <Route path="/bitbucket-draft-pr-guide" element={<BitbucketDraftPRGuide />} />
             <Route path="/git-commit-am-guide" element={<GitCommitAmGuide />} />
             <Route path="/git-commands-reference" element={<GitCommandsReference />} />
+            <Route path="/git-feature-branch-rebase" element={<GitFeatureBranchRebase />} />
             <Route path="/ci-4" element={<LayoutSetup />} />
             <Route path="/laravel-queue-worker-guide" element={<LaravelQueueWorkerGuide />} />
+            <Route path="/laravel-concepts" element={<LaravelConcetps />} />
+            <Route path="/laravel-utility-class" element={<LaravelUtilityClassGuide />} />
             <Route path="/login" element={<Login />} /> {/* Add the Login route */}
             {/* Add more routes as needed */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

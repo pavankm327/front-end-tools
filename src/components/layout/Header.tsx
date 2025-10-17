@@ -118,6 +118,19 @@ const Header = () => {
               {menuOpen["laravel"] && (
                 <div className="absolute mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded-md py-2">
                   <Link
+                    to="/laravel-concepts"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Laravel Concepts
+                  </Link>
+                  <Link
+                    to="/laravel-utility-class"
+                    onClick={() => setIsOpen(false)}
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Utility Classes
+                  </Link>
+                  <Link
                     to="/laravel-queue-worker-guide"
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
@@ -179,6 +192,12 @@ const Header = () => {
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     Fix Unintended Commits
+                  </Link>
+                  <Link
+                    to="/git-feature-branch-rebase"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Feature Branch Management
                   </Link>
                 </div>
               )}
@@ -288,6 +307,20 @@ const Header = () => {
             {menuOpen["laravel"] && (
               <div className="pl-4 mt-1 space-y-1">
                 <Link
+                  to="/laravel-concepts"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Laravel Concepts
+                </Link>
+                <Link
+                  to="/laravel-utility-class"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Utility Classes
+                </Link>
+                <Link
                   to="/laravel-queue-worker-guide"
                   onClick={() => setIsOpen(false)}
                   className="block"
@@ -355,6 +388,13 @@ const Header = () => {
                   className="block"
                 >
                   Fix Unintended Commits
+                </Link>
+                <Link 
+                  to="/git-feature-branch-rebase"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Feature Branch Management
                 </Link>
               </div>
             )}
