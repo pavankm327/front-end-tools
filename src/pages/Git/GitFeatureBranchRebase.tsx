@@ -336,12 +336,14 @@ const GitFeatureBranchRebase = () => {
           <section>
             <div className="flex items-center gap-2 mb-4">
               <RefreshCw className="text-orange-500" size={24} />
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Emergency Rollback</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
+                Emergency Rollback
+              </h2>
             </div>
 
             <CommandExplanation
               command="git reflog"
-              explanation="Shows a log of every time your HEAD pointer moved (every checkout, commit, rebase, reset, etc.). Each entry has a reference like HEAD@{0}, HEAD@{1}, etc. This is your safety net - even 'deleted' commits are here, allowing you to recover from almost any mistake."
+              explanation="Shows a log of every time your HEAD pointer moved (every checkout, commit, rebase, reset, etc.). Each entry has a reference like HEAD@{0}, HEAD@{1}, etc. This is your safety net — even 'deleted' commits are here, allowing you to recover from almost any mistake."
               visual={
                 <div className="font-mono text-xs space-y-1">
                   <div className="text-green-400">HEAD@{'{0}'}: commit abc123 - Latest commit</div>
@@ -365,6 +367,81 @@ const GitFeatureBranchRebase = () => {
                 </div>
               }
             />
+          </section>
+
+          <hr className="border-gray-300 dark:border-gray-600" />
+          
+          {/* Resetting a Feature Branch */}
+          <section>  
+            {/* Resetting a Feature Branch (Clean PR) */}
+            <div className="mt-10">
+              <div className="flex items-center gap-2 mb-4">
+                <RefreshCw className="text-orange-500" size={24} />
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
+                  Resetting a Feature Branch (Clean PR)
+                </h2>
+              </div>
+
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                If you have a <strong>feature branch with a Pull Request (PR)</strong> and want to:
+              </p>
+
+              <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                <li>🧹 Discard all existing commits and changes from that branch</li>
+                <li>🔄 Make it identical to the parent branch (<code>dev</code> or <code>develop</code>)</li>
+                <li>✍️ Reapply new changes later while keeping the same PR</li>
+              </ul>
+
+              <p className="mt-4 text-gray-700 dark:text-gray-300">Follow the steps below 👇</p>
+
+              <CommandExplanation
+                command="git checkout feature-branch"
+                explanation="Switch to your feature branch to ensure you are resetting the correct branch."
+                visual={
+                  <div className="text-xs text-gray-400 space-y-1">
+                    <div>Ensures all following operations apply to the correct branch.</div>
+                    <div className="text-green-400">feature-branch → checked out</div>
+                  </div>
+                }
+              />
+
+              <CommandExplanation
+                command="git fetch origin"
+                explanation="Fetches the latest commits and updates from the remote repository. This ensures your parent branch references (like origin/dev or origin/develop) are up to date."
+                visual={
+                  <div className="text-xs text-gray-400 space-y-1">
+                    <div className="text-green-400">origin/dev → updated</div>
+                    <div className="text-green-400">origin/develop → updated</div>
+                    <div className="text-gray-500">Now you’re working with the latest remote state.</div>
+                  </div>
+                }
+              />
+
+              <CommandExplanation
+                command={`git reset --hard origin/dev  \n# or\n git reset --hard origin/develop`}
+                explanation="Resets your local feature branch to match the specified parent branch (either dev or develop). This removes all local commits and changes, making your branch identical to the parent."
+                visual={
+                  <div className="space-y-2">
+                    <div className="text-gray-400">Before: dev --- A --- B --- C (feature)</div>
+                    <div className="text-yellow-400">↓ git reset --hard origin/dev</div>
+                    <div className="text-green-400">After: dev (feature now identical)</div>
+                    <div className="text-gray-500 text-xs mt-2">A, B, C commits are removed locally but recoverable via reflog.</div>
+                  </div>
+                }
+              />
+
+              <CommandExplanation
+                command="git push origin feature-branch --force # or git push origin feature-branch --force-with-lease"
+                explanation="Force pushes the cleaned-up branch to the remote, overwriting previous commits. This updates your PR to match the parent branch, effectively removing old changes from the PR."
+                visual={
+                  <div className="text-xs text-gray-400 space-y-1">
+                    <div className="text-green-400">Remote PR → Updated</div>
+                    <div className="text-gray-500">Branch now matches dev/develop exactly.</div>
+                    <div className="text-yellow-400">⚠️ Be cautious with --force if others are working on the same branch.</div>
+                  </div>
+                }
+              />
+            </div>
           </section>
 
           <hr className="border-gray-300 dark:border-gray-600" />
