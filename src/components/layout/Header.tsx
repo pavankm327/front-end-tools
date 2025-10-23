@@ -73,13 +73,13 @@ const Header = () => {
               Home
             </Link>
 
-            {/* Development Menu */}
+            {/* DevOps & Integrations Menu */}
             <div className="relative">
               <button
                 onClick={() => toggleSubMenu("development")}
                 className="flex items-center space-x-1 text-gray-700 dark:text-gray-200 hover:text-blue-600"
               >
-                <span>Development</span>
+                <span>DevOps & Integrations</span>
                 <ChevronDown size={16} />
               </button>
               {menuOpen["development"] && (
@@ -101,6 +101,12 @@ const Header = () => {
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     Webhook
+                  </Link>
+                  <Link
+                    to="/ssl-guide-lets-encrypt"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    SSL - Let's Encrypt
                   </Link>
                 </div>
               )}
@@ -268,7 +274,7 @@ const Header = () => {
               onClick={() => toggleSubMenu("development")}
               className="flex justify-between w-full text-gray-700 dark:text-gray-200 hover:text-blue-600"
             >
-              Development <ChevronDown size={16} />
+              DevOps & Integrations <ChevronDown size={16} />
             </button>
             {menuOpen["development"] && (
               <div className="pl-4 mt-1 space-y-1">
@@ -292,6 +298,12 @@ const Header = () => {
                   className="block"
                 >
                   Webhook
+                </Link>
+                <Link
+                  to="/ssl-guide-lets-encrypt"
+                  onClick={() => setIsOpen(false)}
+                >
+                  SSL / HTTPS
                 </Link>
               </div>
             )}

@@ -22,6 +22,7 @@ import LaravelQueueWorkerGuide from "@/pages/Laravel/LaravelQueueWorkerGuide";
 import LaravelConcetps from "@/pages/Laravel/LaravelConcepts";
 import LaravelUtilityClassGuide from "@/pages/Laravel/LaravelUtilityClassGuide";
 import GitFeatureBranchRebase from "@/pages/Git/GitFeatureBranchRebase";
+import LetEncryptSSLGuide from "@/pages/Devops/LetEncryptSSLGuide";
 
 import Login from "pages/Login"; // Import Login page
 
@@ -40,6 +41,7 @@ const App = () => (
             <Route path="/vite-explanation" element={<ViteExplanation />} />
             <Route path="/web-services-explanation" element={<WebServicesExplanation />} />
             <Route path="/webhook" element={<WebhookExplained />} />
+            <Route path="/ssl-guide-lets-encrypt" element={<LetEncryptSSLGuide />} />
             <Route path="/gitflow-workflow" element={<GitflowWorkflow />} />
             <Route path="/git-conflict-resolution" element={<GitConflictResolution />} />
             <Route path="/git-prune-branches" element={<GitPruneBranches />} />
