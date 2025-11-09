@@ -23,7 +23,10 @@ import LaravelConcetps from "@/pages/Laravel/LaravelConcepts";
 import LaravelUtilityClassGuide from "@/pages/Laravel/LaravelUtilityClassGuide";
 import GitFeatureBranchRebase from "@/pages/Git/GitFeatureBranchRebase";
 import LetEncryptSSLGuide from "@/pages/Devops/LetEncryptSSLGuide";
-
+import ReactRefExplained from "@/pages/React/ReactRefExplained";
+import ReactContextExplained from "@/pages/React/ReactContextExplained";
+import ReactPortalsExplained from "@/pages/React/ReactPortalsExplained";
+import ReactSuspenseExplained from "@/pages/React/ReactSuspenseExplained";
 import Login from "pages/Login"; // Import Login page
 
 const queryClient = new QueryClient();
@@ -54,6 +57,10 @@ const App = () => (
             <Route path="/laravel-queue-worker-guide" element={<LaravelQueueWorkerGuide />} />
             <Route path="/laravel-concepts" element={<LaravelConcetps />} />
             <Route path="/laravel-utility-class" element={<LaravelUtilityClassGuide />} />
+            <Route path="/react-ref" element={<ReactRefExplained />} />
+            <Route path="/react-context" element={<ReactContextExplained />} />
+            <Route path="/react-portal" element={<ReactPortalsExplained />} />
+            <Route path="/react-suspense" element={<ReactSuspenseExplained />} />
             <Route path="/login" element={<Login />} /> {/* Add the Login route */}
             {/* Add more routes as needed */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

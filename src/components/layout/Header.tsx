@@ -111,6 +111,44 @@ const Header = () => {
                 </div>
               )}
             </div>
+            
+            <div className="relative">
+              <button
+                onClick={() => toggleSubMenu("react")}
+                className="flex items-center space-x-1 text-gray-700 dark:text-gray-200 hover:text-blue-600"
+              >
+                <span>React</span>
+                <ChevronDown size={16} />
+              </button>
+              {menuOpen["react"] && (
+                <div className="absolute mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded-md py-2">
+                  <Link
+                    to="/react-ref"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Ref
+                  </Link> 
+                  <Link
+                    to="/react-context"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Context
+                  </Link>
+                  <Link
+                    to="/react-portal"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Portal
+                  </Link>
+                  <Link
+                    to="/react-suspense"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Suspense
+                  </Link>
+                </div>
+              )}
+            </div>
 
             {/* Laravel Menu */}
             <div className="relative">
@@ -308,7 +346,47 @@ const Header = () => {
               </div>
             )}
           </div>
-
+          <div className="relative">
+            <button
+              onClick={() => toggleSubMenu("react")}
+              className="flex justify-between w-full text-gray-700 dark:text-gray-200 hover:text-blue-600"
+            >
+              <span>React</span>
+              <ChevronDown size={16} />
+            </button>
+            {menuOpen["react"] && (
+              <div className="pl-4 mt-1 space-y-1">
+                <Link
+                  to="/react-ref"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Ref
+                </Link>
+                <Link
+                  to="/react-context"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Context
+                </Link>
+                <Link
+                  to="/react-portal"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Portal
+                </Link>
+                  <Link
+                    to="/react-suspense"
+                    onClick={() => setIsOpen(false)}                    
+                    className="block"
+                  >
+                    Suspense
+                  </Link>
+              </div>
+            )}
+          </div>
           <div>
             <button
               onClick={() => toggleSubMenu("laravel")}
