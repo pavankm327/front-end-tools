@@ -108,6 +108,12 @@ const Header = () => {
                   >
                     SSL - Let's Encrypt
                   </Link>
+                  <Link
+                    to="/supabase-migration-guide"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Supabase Migration Guide
+                  </Link>
                 </div>
               )}
             </div>
@@ -243,6 +249,12 @@ const Header = () => {
                   >
                     Feature Branch Management
                   </Link>
+                  <Link
+                    to="/git-prep-new-feature"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Prep for New Feature
+                  </Link>
                 </div>
               )}
             </div>
@@ -340,8 +352,16 @@ const Header = () => {
                 <Link
                   to="/ssl-guide-lets-encrypt"
                   onClick={() => setIsOpen(false)}
+                  className="block"
                 >
-                  SSL / HTTPS
+                  SSL - Let's Encrypt
+                </Link>
+                <Link
+                  to="/supabase-migration-guide"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Supabase Migration Guide
                 </Link>
               </div>
             )}
@@ -485,6 +505,13 @@ const Header = () => {
                   className="block"
                 >
                   Feature Branch Management
+                </Link>
+                <Link
+                  to="/git-prep-new-feature"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Prep for New Feature
                 </Link>
               </div>
             )}
