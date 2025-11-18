@@ -186,6 +186,12 @@ const Header = () => {
                   >
                     Queue Worker Guide
                   </Link>
+                <Link
+                  to="/laravel-graphql-guide"
+                  className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  Laravel GraphQL Guide
+                </Link>
                 </div>
               )}
             </div>
@@ -254,6 +260,12 @@ const Header = () => {
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     Prep for New Feature
+                  </Link>
+                  <Link
+                    to="/git-commit-types"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Commit Types
                   </Link>
                 </div>
               )}
@@ -437,6 +449,13 @@ const Header = () => {
                 >
                   Queue Worker Guide
                 </Link>
+                <Link
+                  to="/laravel-graphql-guide"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Laravel GraphQL Guide
+                </Link>
               </div>
             )}
           </div>
@@ -512,6 +531,13 @@ const Header = () => {
                   className="block"
                 >
                   Prep for New Feature
+                </Link>
+                <Link
+                  to="/git-commit-types"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Commit Types
                 </Link>
               </div>
             )}

@@ -21,7 +21,9 @@ import LayoutSetup from "pages/CodeIgniter/LayoutSetup";
 import LaravelQueueWorkerGuide from "@/pages/Laravel/LaravelQueueWorkerGuide";
 import LaravelConcetps from "@/pages/Laravel/LaravelConcepts";
 import LaravelUtilityClassGuide from "@/pages/Laravel/LaravelUtilityClassGuide";
+import LaravelGraphQLGuide from "@/pages/Laravel/LaravelGraphQLGuide";
 import GitFeatureBranchRebase from "@/pages/Git/GitFeatureBranchRebase";
+import CommitType from "@/pages/Git/CommitType"; 
 import LetEncryptSSLGuide from "@/pages/Devops/LetEncryptSSLGuide";
 import ReactRefExplained from "@/pages/React/ReactRefExplained";
 import ReactContextExplained from "@/pages/React/ReactContextExplained";
@@ -56,10 +58,12 @@ const App = () => (
             <Route path="/git-commit-am-guide" element={<GitCommitAmGuide />} />
             <Route path="/git-commands-reference" element={<GitCommandsReference />} />
             <Route path="/git-feature-branch-rebase" element={<GitFeatureBranchRebase />} />
+            <Route path="git-commit-types" element={<CommitType />} />
             <Route path="/ci-4" element={<LayoutSetup />} />
             <Route path="/laravel-queue-worker-guide" element={<LaravelQueueWorkerGuide />} />
             <Route path="/laravel-concepts" element={<LaravelConcetps />} />
             <Route path="/laravel-utility-class" element={<LaravelUtilityClassGuide />} />
+            <Route path="/laravel-graphql-guide" element={<LaravelGraphQLGuide />} />
             <Route path="/react-ref" element={<ReactRefExplained />} />
             <Route path="/react-context" element={<ReactContextExplained />} />
             <Route path="/react-portal" element={<ReactPortalsExplained />} />
