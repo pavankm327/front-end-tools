@@ -289,7 +289,7 @@ const Header = () => {
             >
               CodeIgniter
             </Link>
-            <Link
+            {/* <Link
               to="/about"
               className="text-gray-700 dark:text-gray-200 hover:text-blue-600"
             >
@@ -300,7 +300,7 @@ const Header = () => {
               className="text-gray-700 dark:text-gray-200 hover:text-blue-600"
             >
               Contact
-            </Link>
+            </Link> */}
 
             {session ? (
               <button
@@ -576,7 +576,7 @@ const Header = () => {
           >
             CodeIgniter
           </Link>
-          <Link
+          {/* <Link
             to="/about"
             className="block text-gray-700 dark:text-gray-200"
             onClick={() => setIsOpen(false)}
@@ -589,7 +589,7 @@ const Header = () => {
             onClick={() => setIsOpen(false)}
           >
             Contact
-          </Link>
+          </Link> */}
 
           {session ? (
             <button
