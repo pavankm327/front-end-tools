@@ -114,6 +114,12 @@ const Header = () => {
                   >
                     Supabase Migration Guide
                   </Link>
+                  <Link
+                    to="/react-deployment-and-security-hardening"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    React Deployment & Security Hardening
+                  </Link>                  
                 </div>
               )}
             </div>
@@ -374,6 +380,13 @@ const Header = () => {
                   className="block"
                 >
                   Supabase Migration Guide
+                </Link>
+                <Link
+                  to="/react-deployment-and-security-hardening"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  React Deployment & Security Hardening
                 </Link>
               </div>
             )}
