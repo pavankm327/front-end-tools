@@ -4,9 +4,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTopOnRouteChange from "@/components/ScrollToTopOnRouteChange";
-import { SessionContextProvider } from "@/integrations/supabase/session-context"; // Import SessionContextProvider
+import { SessionContextProvider } from "@/integrations/supabase/session-context";
 import Index from "pages/Index";
 import NotFound from "pages/NotFound";
+import Resources from "pages/Resources";
 import ViteExplanation from "pages/ViteExplanation";
 import WebServicesExplanation from "pages/WebServicesExplanation";
 import WebhookExplained from "pages/WebhookExplained";
@@ -33,7 +34,7 @@ import ReactDeploymentSecurityGuide from "@/pages/Devops/ReactDeploymentSecurity
 import ReactNamingConventions from "@/pages/React/ReactNamingConventions";
 import SupabaseMigrationGuide from "@/pages/Devops/SupabaseMigrationGuide";
 import GitPrepNewFeature from "@/pages/Git/GitPrepNewFeature";
-import Login from "pages/Login"; // Import Login page
+import Login from "pages/Login";
 
 const queryClient = new QueryClient();
 
@@ -44,9 +45,10 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTopOnRouteChange />
-        <SessionContextProvider> {/* Wrap the entire app with SessionContextProvider */}
+        <SessionContextProvider>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/resources/:category" element={<Resources />} /> {/* Add Resources route */}
             <Route path="/vite-explanation" element={<ViteExplanation />} />
             <Route path="/web-services-explanation" element={<WebServicesExplanation />} />
             <Route path="/webhook" element={<WebhookExplained />} />
@@ -73,8 +75,7 @@ const App = () => (
             <Route path="/react-deployment-and-security-hardening" element={<ReactDeploymentSecurityGuide />} />
             <Route path="/react-naming-conventions" element={<ReactNamingConventions />} />
             <Route path="/git-prep-new-feature" element={<GitPrepNewFeature />} />
-            <Route path="/login" element={<Login />} /> {/* Add the Login route */}
-            {/* Add more routes as needed */}
+            <Route path="/login" element={<Login />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
