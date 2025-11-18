@@ -158,6 +158,12 @@ const Header = () => {
                   >
                     Suspense
                   </Link>
+                  <Link
+                    to="/react-naming-conventions"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    React Naming Conventions
+                  </Link>
                 </div>
               )}
             </div>
@@ -428,6 +434,13 @@ const Header = () => {
                     className="block"
                   >
                     Suspense
+                  </Link>
+                  <Link
+                    to="/react-naming-conventions"
+                    onClick={() => setIsOpen(false)}                    
+                    className="block"
+                  >
+                    React Naming Conventions
                   </Link>
               </div>
             )}

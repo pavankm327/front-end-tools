@@ -30,6 +30,7 @@ import ReactContextExplained from "@/pages/React/ReactContextExplained";
 import ReactPortalsExplained from "@/pages/React/ReactPortalsExplained";
 import ReactSuspenseExplained from "@/pages/React/ReactSuspenseExplained";
 import ReactDeploymentSecurityGuide from "@/pages/Devops/ReactDeploymentSecurityGuide";
+import ReactNamingConventions from "@/pages/React/ReactNamingConventions";
 import SupabaseMigrationGuide from "@/pages/Devops/SupabaseMigrationGuide";
 import GitPrepNewFeature from "@/pages/Git/GitPrepNewFeature";
 import Login from "pages/Login"; // Import Login page
@@ -70,6 +71,7 @@ const App = () => (
             <Route path="/react-portal" element={<ReactPortalsExplained />} />
             <Route path="/react-suspense" element={<ReactSuspenseExplained />} />
             <Route path="/react-deployment-and-security-hardening" element={<ReactDeploymentSecurityGuide />} />
+            <Route path="/react-naming-conventions" element={<ReactNamingConventions />} />
             <Route path="/git-prep-new-feature" element={<GitPrepNewFeature />} />
             <Route path="/login" element={<Login />} /> {/* Add the Login route */}
             {/* Add more routes as needed */}
