@@ -44,6 +44,12 @@ git config user.name`}</code>
                   <code>git config --global core.editor "code --wait"</code>
                 </pre>
               </div>
+              <div>
+                <p className="text-gray-700 dark:text-gray-300 mb-1"><b>Force Git to track case changes:</b></p>
+                <pre className="bg-gray-900 text-green-400 rounded-lg p-3 overflow-auto text-sm">
+                  <code>git config core.ignorecase false</code>
+                </pre>
+              </div>
               <a
                 href="https://git-scm.com/docs/git-config"
                 target="_blank"
