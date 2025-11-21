@@ -27,6 +27,7 @@ import LaravelQueueWorkerGuide from "@/pages/Laravel/LaravelQueueWorkerGuide";
 import LaravelConcetps from "@/pages/Laravel/LaravelConcepts";
 import LaravelUtilityClassGuide from "@/pages/Laravel/LaravelUtilityClassGuide";
 import LaravelGraphQLGuide from "@/pages/Laravel/LaravelGraphQLGuide";
+import LaravelLayoutsGuide from "@/pages/Laravel/LaravelLayoutsGuide";
 import LetEncryptSSLGuide from "@/pages/Devops/LetEncryptSSLGuide";
 import ReactRefExplained from "@/pages/React/ReactRefExplained";
 import ReactContextExplained from "@/pages/React/ReactContextExplained";
@@ -69,6 +70,7 @@ const App = () => (
             <Route path="/laravel-concepts" element={<LaravelConcetps />} />
             <Route path="/laravel-utility-class" element={<LaravelUtilityClassGuide />} />
             <Route path="/laravel-graphql-guide" element={<LaravelGraphQLGuide />} />
+            <Route path="/laravel-layouts-guide" element={<LaravelLayoutsGuide />} />
             <Route path="/react-ref" element={<ReactRefExplained />} />
             <Route path="/react-context" element={<ReactContextExplained />} />
             <Route path="/react-portal" element={<ReactPortalsExplained />} />

@@ -23,6 +23,7 @@ const Resources = () => {
       title: "Laravel Resources",
       items: [
         { name: "Laravel Concepts", path: "/laravel-concepts", description: "Core Laravel concepts and patterns" },
+        { name: "Laravel Layouts Guide", path: "/laravel-layouts-guide", description: "Setting up layouts in Laravel" },
         { name: "Utility Classes", path: "/laravel-utility-class", description: "Reusable utility classes" },
         { name: "Queue Worker Guide", path: "/laravel-queue-worker-guide", description: "Managing background jobs" },
         { name: "Laravel GraphQL Guide", path: "/laravel-graphql-guide", description: "Implementing GraphQL APIs" },

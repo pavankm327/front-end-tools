@@ -186,6 +186,12 @@ const Header = () => {
                     Laravel Concepts
                   </Link>
                   <Link
+                    to="/laravel-layouts-guide"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Setting up layouts in Laravel 
+                  </Link>
+                  <Link
                     to="/laravel-utility-class"
                     onClick={() => setIsOpen(false)}
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -198,12 +204,12 @@ const Header = () => {
                   >
                     Queue Worker Guide
                   </Link>
-                <Link
-                  to="/laravel-graphql-guide"
-                  className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-                >
-                  Laravel GraphQL Guide
-                </Link>
+                  <Link
+                    to="/laravel-graphql-guide"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Laravel GraphQL Guide
+                  </Link>
                 </div>
               )}
             </div>
@@ -466,6 +472,13 @@ const Header = () => {
                   className="block"
                 >
                   Laravel Concepts
+                </Link>
+                <Link
+                  to="/laravel-layouts-guide"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Setting up layouts in Laravel 
                 </Link>
                 <Link
                   to="/laravel-utility-class"
