@@ -41,6 +41,7 @@ const Resources = () => {
         { name: "Feature Branch Management", path: "/git-feature-branch-rebase", description: "Rebasing strategies" },
         { name: "Prep for New Feature", path: "/git-prep-new-feature", description: "Starting new features" },
         { name: "Commit Types", path: "/git-commit-types", description: "Conventional commits guide" },
+        { name: "GitHub to Bitbucket Guide", path: "/github-to-bitbucket-guide", description: "GitHub to Bitbucket Migration" },
       ],
     },
     devops: {

@@ -18,13 +18,15 @@ import PRScenariosGuide from "pages/Git/PRScenariosGuide";
 import BitbucketDraftPRGuide from "pages/Git/BitbucketDraftPRGuide";
 import GitCommitAmGuide from "pages/Git/GitCommitAmGuide";
 import GitCommandsReference from "pages/Git/GitCommandsReference";
+import GitFeatureBranchRebase from "@/pages/Git/GitFeatureBranchRebase";
+import CommitType from "@/pages/Git/CommitType";
+import GitPrepNewFeature from "@/pages/Git/GitPrepNewFeature";
+import GitHubToBitbucketGuide from "@/pages/Git/GitHubToBitbucketGuide";
 import LayoutSetup from "pages/CodeIgniter/LayoutSetup";
 import LaravelQueueWorkerGuide from "@/pages/Laravel/LaravelQueueWorkerGuide";
 import LaravelConcetps from "@/pages/Laravel/LaravelConcepts";
 import LaravelUtilityClassGuide from "@/pages/Laravel/LaravelUtilityClassGuide";
 import LaravelGraphQLGuide from "@/pages/Laravel/LaravelGraphQLGuide";
-import GitFeatureBranchRebase from "@/pages/Git/GitFeatureBranchRebase";
-import CommitType from "@/pages/Git/CommitType"; 
 import LetEncryptSSLGuide from "@/pages/Devops/LetEncryptSSLGuide";
 import ReactRefExplained from "@/pages/React/ReactRefExplained";
 import ReactContextExplained from "@/pages/React/ReactContextExplained";
@@ -33,7 +35,6 @@ import ReactSuspenseExplained from "@/pages/React/ReactSuspenseExplained";
 import ReactDeploymentSecurityGuide from "@/pages/Devops/ReactDeploymentSecurityGuide";
 import ReactNamingConventions from "@/pages/React/ReactNamingConventions";
 import SupabaseMigrationGuide from "@/pages/Devops/SupabaseMigrationGuide";
-import GitPrepNewFeature from "@/pages/Git/GitPrepNewFeature";
 import Login from "pages/Login";
 
 const queryClient = new QueryClient();
@@ -75,6 +76,7 @@ const App = () => (
             <Route path="/react-deployment-and-security-hardening" element={<ReactDeploymentSecurityGuide />} />
             <Route path="/react-naming-conventions" element={<ReactNamingConventions />} />
             <Route path="/git-prep-new-feature" element={<GitPrepNewFeature />} />
+            <Route path="/github-to-bitbucket-guide" element={<GitHubToBitbucketGuide />} />
             <Route path="/login" element={<Login />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
