@@ -1003,7 +1003,7 @@ video.addEventListener('loadeddata', function() {
                 <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded">
                   <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Documentation</h3>
                   <ul className="text-sm space-y-1 text-blue-600 dark:text-blue-400">
-                    <li>• <a href="https://web.dev/lazy-loading-video/" target="_blank" rel="noopener" className="hover:underline">Web.dev: Lazy Loading Videos</a></li>
+                    <li>• <a href="https://web.dev/articles/lazy-loading-video" target="_blank" rel="noopener" className="hover:underline">Web.dev: Lazy Loading Videos</a></li>
                     <li>• <a href="https://developers.google.com/web/tools/lighthouse" target="_blank" rel="noopener" className="hover:underline">Google Lighthouse</a></li>
                     <li>• <a href="https://ffmpeg.org/documentation.html" target="_blank" rel="noopener" className="hover:underline">FFmpeg Documentation</a></li>
                     <li>• <a href="https://swiperjs.com/swiper-api" target="_blank" rel="noopener" className="hover:underline">Swiper.js API</a></li>
