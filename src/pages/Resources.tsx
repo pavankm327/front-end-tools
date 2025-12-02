@@ -27,6 +27,7 @@ const Resources = () => {
         { name: "Utility Classes", path: "/laravel-utility-class", description: "Reusable utility classes" },
         { name: "Queue Worker Guide", path: "/laravel-queue-worker-guide", description: "Managing background jobs" },
         { name: "Laravel GraphQL Guide", path: "/laravel-graphql-guide", description: "Implementing GraphQL APIs" },
+        { name: "Laravel Performance Guide", path: "/laravel-performance-guide", description: "Optimizing Laravel applications" },
       ],
     },
     git: {
@@ -53,7 +54,9 @@ const Resources = () => {
         { name: "Webhook", path: "/webhook", description: "Understanding webhooks" },
         { name: "SSL - Let's Encrypt", path: "/ssl-guide-lets-encrypt", description: "Free SSL certificates setup" },
         { name: "Supabase Migration Guide", path: "/supabase-migration-guide", description: "Database migration strategies" },
+        { name: "Synk Supabase Migrations", path: "/sync-supabase-migration", description: "Understanding how migrations work when multiple developers collaborate" },
         { name: "React Deployment & Security", path: "/react-deployment-and-security-hardening", description: "Production deployment best practices" },
+        { name: "Apache React Redirection Guide", path: "/apache-react-redirection", description: "Practical steps to force HTTP→HTTPS, configure VirtualHosts and others" },
       ],
     },
     codeigniter: {

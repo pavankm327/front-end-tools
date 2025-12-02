@@ -28,6 +28,7 @@ import LaravelConcetps from "@/pages/Laravel/LaravelConcepts";
 import LaravelUtilityClassGuide from "@/pages/Laravel/LaravelUtilityClassGuide";
 import LaravelGraphQLGuide from "@/pages/Laravel/LaravelGraphQLGuide";
 import LaravelLayoutsGuide from "@/pages/Laravel/LaravelLayoutsGuide";
+import LaravelPerformanceGuide from "@/pages/Laravel/LaravelPerformanceGuide";
 import LetEncryptSSLGuide from "@/pages/Devops/LetEncryptSSLGuide";
 import ReactRefExplained from "@/pages/React/ReactRefExplained";
 import ReactContextExplained from "@/pages/React/ReactContextExplained";
@@ -36,6 +37,9 @@ import ReactSuspenseExplained from "@/pages/React/ReactSuspenseExplained";
 import ReactDeploymentSecurityGuide from "@/pages/Devops/ReactDeploymentSecurityGuide";
 import ReactNamingConventions from "@/pages/React/ReactNamingConventions";
 import SupabaseMigrationGuide from "@/pages/Devops/SupabaseMigrationGuide";
+import SyncSupabaseMigration from "@/pages/Devops/SyncSupabaseMigration";
+import ApacheReactRedirectionGuide from "@/pages/Devops/ApacheReactRedirectionGuide";
+
 import Login from "pages/Login";
 
 const queryClient = new QueryClient();
@@ -56,6 +60,8 @@ const App = () => (
             <Route path="/webhook" element={<WebhookExplained />} />
             <Route path="/ssl-guide-lets-encrypt" element={<LetEncryptSSLGuide />} />
             <Route path="/supabase-migration-guide" element={<SupabaseMigrationGuide />} />
+            <Route path="/sync-supabase-migration" element={<SyncSupabaseMigration />} />
+            <Route path="/apache-react-redirection" element={<ApacheReactRedirectionGuide />} />
             <Route path="/gitflow-workflow" element={<GitflowWorkflow />} />
             <Route path="/git-conflict-resolution" element={<GitConflictResolution />} />
             <Route path="/git-prune-branches" element={<GitPruneBranches />} />
@@ -71,6 +77,7 @@ const App = () => (
             <Route path="/laravel-utility-class" element={<LaravelUtilityClassGuide />} />
             <Route path="/laravel-graphql-guide" element={<LaravelGraphQLGuide />} />
             <Route path="/laravel-layouts-guide" element={<LaravelLayoutsGuide />} />
+            <Route path="/laravel-performance-guide" element={<LaravelPerformanceGuide />} />
             <Route path="/react-ref" element={<ReactRefExplained />} />
             <Route path="/react-context" element={<ReactContextExplained />} />
             <Route path="/react-portal" element={<ReactPortalsExplained />} />

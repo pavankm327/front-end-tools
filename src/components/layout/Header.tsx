@@ -115,11 +115,23 @@ const Header = () => {
                     Supabase Migration Guide
                   </Link>
                   <Link
+                    to="/sync-supabase-migration"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Synk Supabase Migrations
+                  </Link>
+                  <Link
                     to="/react-deployment-and-security-hardening"
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     React Deployment & Security Hardening
-                  </Link>                  
+                  </Link>
+                  <Link
+                    to="/apache-react-redirection"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Apache React Redirection Guide
+                  </Link>                       
                 </div>
               )}
             </div>
@@ -209,6 +221,12 @@ const Header = () => {
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     Laravel GraphQL Guide
+                  </Link>
+                  <Link
+                    to="/laravel-performance-guide"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Laravel Performance Guide
                   </Link>
                 </div>
               )}
@@ -400,11 +418,25 @@ const Header = () => {
                   Supabase Migration Guide
                 </Link>
                 <Link
+                  to="/sync-supabase-migration"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Synk Supabase Migrations
+                </Link>
+                <Link
                   to="/react-deployment-and-security-hardening"
                   onClick={() => setIsOpen(false)}
                   className="block"
                 >
                   React Deployment & Security Hardening
+                </Link>
+                <Link
+                  to="/apache-react-redirection"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Apache React Redirection Guide
                 </Link>
               </div>
             )}
@@ -500,6 +532,13 @@ const Header = () => {
                   className="block"
                 >
                   Laravel GraphQL Guide
+                </Link>
+                <Link
+                  to="/laravel-performance-guide"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Laravel Performance Guide
                 </Link>
               </div>
             )}
