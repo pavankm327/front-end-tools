@@ -29,6 +29,8 @@ import LaravelUtilityClassGuide from "@/pages/Laravel/LaravelUtilityClassGuide";
 import LaravelGraphQLGuide from "@/pages/Laravel/LaravelGraphQLGuide";
 import LaravelLayoutsGuide from "@/pages/Laravel/LaravelLayoutsGuide";
 import LaravelPerformanceGuide from "@/pages/Laravel/LaravelPerformanceGuide";
+import LaravelLifecycle from "@/pages/Laravel/LaravelLifecycle";
+import LaravelDBTransactionsGuide from "@/pages/Laravel/LaravelDBTransactionsGuide";
 import LetEncryptSSLGuide from "@/pages/Devops/LetEncryptSSLGuide";
 import ReactRefExplained from "@/pages/React/ReactRefExplained";
 import ReactContextExplained from "@/pages/React/ReactContextExplained";
@@ -78,6 +80,8 @@ const App = () => (
             <Route path="/laravel-graphql-guide" element={<LaravelGraphQLGuide />} />
             <Route path="/laravel-layouts-guide" element={<LaravelLayoutsGuide />} />
             <Route path="/laravel-performance-guide" element={<LaravelPerformanceGuide />} />
+            <Route path="/laravel-lifecycle" element={<LaravelLifecycle />} />
+            <Route path="/laravel-db-transactions-guide" element={<LaravelDBTransactionsGuide />} />
             <Route path="/react-ref" element={<ReactRefExplained />} />
             <Route path="/react-context" element={<ReactContextExplained />} />
             <Route path="/react-portal" element={<ReactPortalsExplained />} />

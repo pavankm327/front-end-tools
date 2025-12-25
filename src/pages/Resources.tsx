@@ -23,11 +23,13 @@ const Resources = () => {
       title: "Laravel Resources",
       items: [
         { name: "Laravel Concepts", path: "/laravel-concepts", description: "Core Laravel concepts and patterns" },
+        { name: "Laravel Request Lifecycle", path: "/laravel-lifecycle", description: "Laravel Request Lifecycle" },
         { name: "Laravel Layouts Guide", path: "/laravel-layouts-guide", description: "Setting up layouts in Laravel" },
         { name: "Utility Classes", path: "/laravel-utility-class", description: "Reusable utility classes" },
         { name: "Queue Worker Guide", path: "/laravel-queue-worker-guide", description: "Managing background jobs" },
         { name: "Laravel GraphQL Guide", path: "/laravel-graphql-guide", description: "Implementing GraphQL APIs" },
         { name: "Laravel Performance Guide", path: "/laravel-performance-guide", description: "Optimizing Laravel applications" },
+        { name: "Laravel DB Transactions Guide", path: "/laravel-db-transactions-guide", description: "Using database transactions in Laravel" },
       ],
     },
     git: {

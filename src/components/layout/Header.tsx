@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, LogIn, LogOut, ChevronDown } from "lucide-react";
 import { useSession } from "@/integrations/supabase/session-context";
@@ -198,6 +198,12 @@ const Header = () => {
                     Laravel Concepts
                   </Link>
                   <Link
+                    to="/laravel-lifecycle"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Laravel Request Lifecycle
+                  </Link>
+                  <Link
                     to="/laravel-layouts-guide"
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
@@ -227,6 +233,12 @@ const Header = () => {
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     Laravel Performance Guide
+                  </Link>
+                  <Link
+                    to="/laravel-db-transactions-guide"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    Laravel DB Transactions Guide
                   </Link>
                 </div>
               )}
@@ -506,6 +518,13 @@ const Header = () => {
                   Laravel Concepts
                 </Link>
                 <Link
+                  to="/laravel-lifecycle"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Laravel Request Lifecycle
+                </Link>
+                <Link
                   to="/laravel-layouts-guide"
                   onClick={() => setIsOpen(false)}
                   className="block"
@@ -539,6 +558,13 @@ const Header = () => {
                   className="block"
                 >
                   Laravel Performance Guide
+                </Link>
+                <Link
+                  to="/laravel-db-transactions-guide"
+                  onClick={() => setIsOpen(false)}
+                  className="block"
+                >
+                  Laravel DB Transactions Guide
                 </Link>
               </div>
             )}
