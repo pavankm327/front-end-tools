@@ -16,12 +16,13 @@ import GitConflictResolution from "pages/Git/GitConflictResolution";
 import GitPruneBranches from "pages/Git/GitPruneBranches";
 import PRScenariosGuide from "pages/Git/PRScenariosGuide";
 import BitbucketDraftPRGuide from "pages/Git/BitbucketDraftPRGuide";
-import GitCommitAmGuide from "pages/Git/GitCommitAmGuide";
+import GitCommitCleanupGuide from "pages/Git/GitCommitCleanupGuide";
 import GitCommandsReference from "pages/Git/GitCommandsReference";
 import GitFeatureBranchRebase from "@/pages/Git/GitFeatureBranchRebase";
 import CommitType from "@/pages/Git/CommitType";
 import GitPrepNewFeature from "@/pages/Git/GitPrepNewFeature";
 import GitHubToBitbucketGuide from "@/pages/Git/GitHubToBitbucketGuide";
+import GitSensitiveFileRemovalGuide from "@/pages/Git/GitSensitiveFileRemovalGuide"
 import LayoutSetup from "pages/CodeIgniter/LayoutSetup";
 import LaravelQueueWorkerGuide from "@/pages/Laravel/LaravelQueueWorkerGuide";
 import LaravelConcetps from "@/pages/Laravel/LaravelConcepts";
@@ -69,7 +70,7 @@ const App = () => (
             <Route path="/git-prune-branches" element={<GitPruneBranches />} />
             <Route path="/pr-scenarios-guide" element={<PRScenariosGuide />} />
             <Route path="/bitbucket-draft-pr-guide" element={<BitbucketDraftPRGuide />} />
-            <Route path="/git-commit-am-guide" element={<GitCommitAmGuide />} />
+            <Route path="/git-commit-am-guide" element={<GitCommitCleanupGuide />} />
             <Route path="/git-commands-reference" element={<GitCommandsReference />} />
             <Route path="/git-feature-branch-rebase" element={<GitFeatureBranchRebase />} />
             <Route path="git-commit-types" element={<CommitType />} />
@@ -90,6 +91,7 @@ const App = () => (
             <Route path="/react-naming-conventions" element={<ReactNamingConventions />} />
             <Route path="/git-prep-new-feature" element={<GitPrepNewFeature />} />
             <Route path="/github-to-bitbucket-guide" element={<GitHubToBitbucketGuide />} />
+            <Route path="/git-sensitive-file-removal-guide" element={<GitSensitiveFileRemovalGuide />} />
             <Route path="/login" element={<Login />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

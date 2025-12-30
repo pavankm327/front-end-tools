@@ -83,7 +83,7 @@ const Header = () => {
                 <ChevronDown size={16} />
               </button>
               {menuOpen["development"] && (
-                <div className="absolute mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded-md py-2">
+                <div className="absolute mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded-md py-2 max-h-80 overflow-y-auto">
                   <Link
                     to="/vite-explanation"
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -145,7 +145,7 @@ const Header = () => {
                 <ChevronDown size={16} />
               </button>
               {menuOpen["react"] && (
-                <div className="absolute mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded-md py-2">
+                <div className="absolute mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded-md py-2 max-h-80 overflow-y-auto">
                   <Link
                     to="/react-ref"
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -190,7 +190,7 @@ const Header = () => {
                 <ChevronDown size={16} />
               </button>
               {menuOpen["laravel"] && (
-                <div className="absolute mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded-md py-2">
+                <div className="absolute mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded-md py-2 max-h-80 overflow-y-auto">
                   <Link
                     to="/laravel-concepts"
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -254,7 +254,7 @@ const Header = () => {
                 <ChevronDown size={16} />
               </button>
               {menuOpen["git"] && (
-                <div className="absolute mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded-md py-2">
+                <div className="absolute mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded-md py-2 max-h-80 overflow-y-auto">
                   <Link
                     to="/git-commands-reference"
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -320,6 +320,12 @@ const Header = () => {
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                   > 
                     GitHub to Bitbucket Migration
+                  </Link>
+                  <Link
+                    to="/git-sensitive-file-removal-guide"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  > 
+                    Remove Sensitive Files from Git History
                   </Link>
                 </div>
               )}
@@ -393,7 +399,7 @@ const Header = () => {
               DevOps & Integrations <ChevronDown size={16} />
             </button>
             {menuOpen["development"] && (
-              <div className="pl-4 mt-1 space-y-1">
+              <div className="pl-4 mt-1 space-y-1 max-h-40 overflow-y-auto">
                 <Link
                   to="/vite-explanation"
                   onClick={() => setIsOpen(false)}
@@ -462,7 +468,7 @@ const Header = () => {
               <ChevronDown size={16} />
             </button>
             {menuOpen["react"] && (
-              <div className="pl-4 mt-1 space-y-1">
+              <div className="pl-4 mt-1 space-y-1 max-h-40 overflow-y-auto">
                 <Link
                   to="/react-ref"
                   onClick={() => setIsOpen(false)}
@@ -509,7 +515,7 @@ const Header = () => {
               Laravel <ChevronDown size={16} />
             </button>
             {menuOpen["laravel"] && (
-              <div className="pl-4 mt-1 space-y-1">
+              <div className="pl-4 mt-1 space-y-1 max-h-40 overflow-y-auto">
                 <Link
                   to="/laravel-concepts"
                   onClick={() => setIsOpen(false)}
@@ -578,7 +584,7 @@ const Header = () => {
               Git <ChevronDown size={16} />
             </button>
             {menuOpen["git"] && (
-              <div className="pl-4 mt-1 space-y-1">
+              <div className="pl-4 mt-1 space-y-1 max-h-40 overflow-y-auto">
                 <Link
                   to="/git-commands-reference"
                   onClick={() => setIsOpen(false)}
@@ -656,6 +662,13 @@ const Header = () => {
                 >
                   GitHub to Bitbucket Migration
                 </Link>
+                  <Link
+                    to="/git-sensitive-file-removal-guide"
+                    onClick={() => setIsOpen(false)}
+                    className="block"
+                  > 
+                    Remove Sensitive Files from Git History
+                  </Link>
               </div>
             )}
           </div>

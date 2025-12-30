@@ -46,6 +46,7 @@ const Resources = () => {
         { name: "Prep for New Feature", path: "/git-prep-new-feature", description: "Starting new features" },
         { name: "Commit Types", path: "/git-commit-types", description: "Conventional commits guide" },
         { name: "GitHub to Bitbucket Guide", path: "/github-to-bitbucket-guide", description: "GitHub to Bitbucket Migration" },
+        { name: "Remove Sensitive Files", path: "/git-sensitive-file-removal-guide", description: "Steps to Remove the Sensitive Files from Git History" },
       ],
     },
     devops: {
